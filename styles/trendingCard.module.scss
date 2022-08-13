@@ -1,0 +1,85 @@
+@import './globalVariable.scss';
+
+.trendingCard {
+  box-sizing: border-box;
+  margin: 20px;
+
+  width: 300px;
+  height: 400px;
+
+  grid-template-rows: 1fr 1fr;
+  gap: 0;
+  padding: 0;
+
+  background: #FFFFFF;
+  /* subtle-border */
+  border: 1px solid #C2C5D5;
+  border-radius: 25px;
+
+  filter: drop-shadow(0px 4px 10px rgba(0, 0, 0, 0.25));
+}
+
+.img {
+  box-sizing: border-box;
+
+  width: 298px;
+  height: 200px;
+
+  margin: 0;
+
+  background: #AAA7F2;
+  border-radius: 23px 23px 0px 0px;
+}
+
+.info {
+  box-sizing: border-box;
+  justify-self: stretch;
+
+  width: 300px;
+  height: 200px;
+
+  margin: 0;
+  padding: 20px;
+
+  border-radius: 0px 0px 25px 25px;
+}
+
+.text {
+  display: flex;
+  flex-direction: column;
+  width: auto;
+  height: 140px;
+
+  overflow-y: hidden;
+}
+
+.title {
+  margin: 0px;
+}
+
+.description {
+  font-size: 12px;
+  color: grey;
+}
+
+.stats {
+  width: 130px;
+  height: 25px;
+
+  margin-left: auto; 
+  margin-right: 0;
+
+  padding: 2.5px;
+
+  color: grey;
+  fill: grey;
+
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.statsElement {
+  justify-self: center;
+  text-align: center;
+  margin: 0;
+}

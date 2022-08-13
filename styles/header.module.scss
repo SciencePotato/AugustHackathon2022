@@ -1,0 +1,73 @@
+@import './globalVariable.scss';
+
+.header{
+    background-color: $secondary-primary-color;
+    padding: 2vh 2vw;
+    display: flex;
+    & > div {
+        &:first-of-type{
+            flex: 1;
+            & > h1 {
+                margin: 0px;
+                font-size: 3rem;
+                & > span {
+                    color: $accent-color;
+                }
+            }
+        }
+        &:nth-of-type(2) {
+            flex: 3;
+            position: relative;
+            display: grid;
+            place-content: flex-end flex-start;
+            & > div {
+                padding-bottom: 0.5vh;
+                & > h2 {
+                    margin: 0px 1vw;
+                    padding: 0.5vh 1vw;
+                    display: inline-block;
+                    cursor: pointer;
+                    transition: all ease-out 0.25s;
+                    &:hover{
+                        color: $accent-color;
+                    }
+
+                    &.active {
+                        background-color: $accent-color;
+                        color: $primary-color;
+                        border-radius: 1rem;
+                    }
+                }
+            }
+        }
+        &:last-of-type {
+            flex: 2;
+            display: grid;
+            place-content: flex-end;
+            min-width: 300px;
+            & > div {
+                position: relative;
+                min-width: 300px;
+                padding-bottom: 0.5vh;
+                & > h2 {
+                    margin: 0px 1vw;
+                    padding: 0.5vh 1vw;
+                    display: inline-block;
+                    cursor: pointer;
+                    transition: all ease-out 0.25s;
+                    &:hover{
+                        color: $accent-color;
+                    }
+                }
+                & > svg {
+                    cursor: pointer;
+                    margin: 0px 1vw;
+                    transition: all ease-out 0.25s;
+                    &:hover{
+                        fill: $accent-color;
+                    }
+                }
+            }
+        }
+    }
+}

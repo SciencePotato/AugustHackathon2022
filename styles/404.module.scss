@@ -1,0 +1,33 @@
+@import './globalVariable.scss';
+
+  .errorZero{
+    text-align: center;
+    font-weight: bold;
+    font-size: 55px;
+    margin-top: -80px;
+  }
+
+  .errorOne{
+    color: $accent-color-dark;
+    text-align: center;
+    font-weight: bold;
+    font-size: 100px;
+    
+  }
+
+
+  .button{
+    background-color:  $accent-color-dark; /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    display: inline-block;
+    font-size: 20px;
+    border-radius:25px;
+  }
+
+  .errorThree{
+    text-align: center;
+    margin-top: -40px;
+  }
