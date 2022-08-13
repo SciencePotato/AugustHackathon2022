@@ -6,32 +6,43 @@ import Nav from '../component/navbar';
 import Footer from '../component/footer';
 import Post from './post/[ID]';
 import styles from '../styles/Welcome.module.scss';
+import Trending from '../component/trending';
 
 const fakeData =  [
   {
     id: 1,
-    title: "a",
-    content: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi quo, commodi tempora quam eveniet nihil. Ad commodi, eum deleniti, reiciendis at dolorem et earum blanditiis incidunt nihil impedit iure ea!"
+    title: "This is the first article",
+    content: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi quo, commodi tempora quam eveniet nihil. Ad commodi, eum deleniti, reiciendis at dolorem et earum blanditiis incidunt nihil impedit iure ea!",
+    comments: 10,
+    likes: 59,
   },
   {
     id: 2,
-    title: "b",
-    content: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi quo, commodi tempora quam eveniet nihil. Ad commodi, eum deleniti, reiciendis at dolorem et earum blanditiis incidunt nihil impedit iure ea!"
+    title: "This is the second article",
+    content: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi quo, commodi tempora quam eveniet nihil. Ad commodi, eum deleniti, reiciendis at dolorem et earum blanditiis incidunt nihil impedit iure ea!",
+    comments: 10,
+    likes: 59,
   },
   {
     id: 3,
-    title: "c",
-    content: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi quo, commodi tempora quam eveniet nihil. Ad commodi, eum deleniti, reiciendis at dolorem et earum blanditiis incidunt nihil impedit iure ea!"
+    title: "This is the third article",
+    content: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi quo, commodi tempora quam eveniet nihil. Ad commodi, eum deleniti, reiciendis at dolorem et earum blanditiis incidunt nihil impedit iure ea!",
+    comments: 10,
+    likes: 59,
   },
   {
     id: 4,
-    title: "d",
-    content: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi quo, commodi tempora quam eveniet nihil. Ad commodi, eum deleniti, reiciendis at dolorem et earum blanditiis incidunt nihil impedit iure ea!"
+    title: "This is the fourth article",
+    content: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi quo, commodi tempora quam eveniet nihil. Ad commodi, eum deleniti, reiciendis at dolorem et earum blanditiis incidunt nihil impedit iure ea!",
+    comments: 10,
+    likes: 59,
   },
   {
     id: 5,
-    title: "e",
-    content: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi quo, commodi tempora quam eveniet nihil. Ad commodi, eum deleniti, reiciendis at dolorem et earum blanditiis incidunt nihil impedit iure ea!"
+    title: "This is the fifth article",
+    content: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi quo, commodi tempora quam eveniet nihil. Ad commodi, eum deleniti, reiciendis at dolorem et earum blanditiis incidunt nihil impedit iure ea!",
+    comments: 10,
+    likes: 59,
   },
 ];
 
@@ -45,6 +56,8 @@ const Home: NextPage = () => {
       </Head>
 
       <Nav num={1}></Nav>
+
+      <Trending data={fakeData}/>
 
       {fakeData.map(data => 
         <h2 key={data.id.toString()}> <Link href={"/post/ID"} as={`/post/${data.id}`}> a</Link></h2>  
