@@ -39,6 +39,17 @@ const Nav: NextPage<Props> = (props) => {
               </h2>
             </>
           }
+          {
+            props.num == 3 &&
+            <>
+            <h2> 
+                <Link href={"/home"}> Homepage </Link>
+              </h2>
+              <h2 className={scss.active}> 
+                <Link href={"/profile"} > Profile </Link>
+              </h2>
+            </>
+          }
         </div>
       </div>
 
