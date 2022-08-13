@@ -1,12 +1,23 @@
 @import './globalVariable.scss';
 
-
+  .errorZero{
+    text-align: center;
+    font-weight: bold;
+    font-size: 80px;
+    margin-top: -80px;
+  }
 
   .errorOne{
     color: $accent-color-dark;
-    position: relative;
     text-align: center;
-    padding: 50px 0 50px;
     font-weight: bold;
     font-size: 80px;
+    
+  }
+
+  .errorThree{
+    background-color: $accent-color-dark;
+    text-align: center;
+    font-size: 80px;
+    margin-top: -60px;
   }
