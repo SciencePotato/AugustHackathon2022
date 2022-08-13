@@ -4,7 +4,7 @@ import Link from 'next/link';
 import scss from './../../styles/404.module.scss';
 
 interface Error404Props{
-    statusCode?: number
+    statusCode?: number 
 }
 
 const Error: NextPage<Error404Props> =({statusCode}) => {

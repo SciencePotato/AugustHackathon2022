@@ -32,3 +32,13 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+
+
+
+
+# Info 
+There are free education offered in the United States from k - 12, but not everyone can afford college due to various reasons. Our website is open to everyone and anyone should be able to learn something new when they come into this website. The goal of our website is to resolved the education gap that exist in the United States by allowing everyone to access our website that will contain many useful information.
+
+Here is the thought process and our design shown in [Figma] (https://www.figma.com/file/4d9zhQbI47duD4FHCY2iJN/August-12-14-Hackathon?node-id=0%3A1)
+
+This is our website [(name)](https://augusthackathon2022-9py1ox1yc-sciencepotato.vercel.app/)
