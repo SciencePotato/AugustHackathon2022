@@ -3,6 +3,11 @@ import Head from 'next/head';
 import Link from 'next/link';
 import scss from './../../styles/Login.module.scss';
 
+import { signInWithEmailAndPassword } from "firebase/auth";
+import { initializeApp } from "firebase/app";
+import { getAuth } from "firebase/auth";
+import {config} from './../../component/database/config';
+
 const Login: NextPage = () => {
   const signin = ()=>{
     const app = initializeApp(config.firebaseConfig);
@@ -46,18 +51,18 @@ const Login: NextPage = () => {
         <div>
           <div>
             <div>
-              <input type="text" placeholder='Username'/>
-              <input type="password" placeholder='Email Address'/>
+              <input type="text" placeholder='Email' id='txtEmail'/>
+              <input type="password" placeholder='Password' id='txtPassword'/>
             </div>
           </div>
           <div>
             <div>
               <div>
-                <Link href={"/home"}> 
-                  <button>
+                {/*<Link href={"/home"}>*/}
+                  <button id='btnSignIn' onClick={ signin}>
                     Login
                   </button>
-                </Link>
+                {/*</Link>*/}
                 <p>
                   <Link href={"/signup"}> Don&apos;t have an account? Join us now!</Link>
                 </p>
