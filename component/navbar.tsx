@@ -2,7 +2,9 @@ import type { NextPage } from 'next';
 import Link from 'next/link';
 import scss from '../styles/header.module.scss'
 
-const Nav: NextPage = (props) => {
+const Nav: NextPage = (props: {num?: Number}) => {
+  const currentPage = props.num;
+  
   return (
     <section className={scss.header}>
       <div>
@@ -11,15 +13,28 @@ const Nav: NextPage = (props) => {
 
       <div>
         <div>
-          <h2 className={scss.active}> 
-            <Link href={"/home"}> Homepage </Link>
-          </h2>
-          <h2> 
-            <Link href={"/about"}> About </Link>
-          </h2>
-          <h2> 
-            <Link href={"/profile"}> Setting </Link>
-          </h2>
+          {
+            currentPage == 1 &&
+            <>
+              <h2 className={scss.active}> 
+                <Link href={"/home"}> Homepage </Link>
+              </h2>
+              <h2> 
+                <Link href={"/about"}> About </Link>
+              </h2>
+            </>
+          }
+          {
+            props.num == 2 &&
+            <>
+              <h2> 
+                <Link href={"/home"}> Homepage </Link>
+              </h2>
+              <h2 className={scss.active}> 
+                <Link href={"/about"} > About </Link>
+              </h2>
+            </>
+          }
         </div>
       </div>
 
@@ -35,8 +50,8 @@ const Nav: NextPage = (props) => {
             </Link>
           </h2>
           <h2>
-            <Link href={"/login"}>
-              Logout
+            <Link href={"/profile"}>
+              Setting
             </Link>
           </h2>
         </div>

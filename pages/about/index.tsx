@@ -1,6 +1,7 @@
 import type { NextPage } from 'next';
 import Head from 'next/head';
-import Image from 'next/image';
+import Nav from '../../component/navbar';
+import Footer from '../../component/footer';
 import scss from '../../styles/about.module.scss';
 
 const About: NextPage = () => {
@@ -12,9 +13,18 @@ const About: NextPage = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <section className={scss.about}>
+      <Nav num={2}></Nav>
 
+      <section className={scss.about}>
+        <h1> About Us</h1>
+        <h3> 
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Magni culpa animi quibusdam. Animi ad aliquam nostrum temporibus a vero libero aperiam incidunt architecto cumque repellendus perferendis, quasi beatae voluptatem quae!
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus culpa nesciunt tempora voluptatibus iste ipsum inventore nemo, beatae vel, exercitationem placeat ab optio cum est. Tempore fuga mollitia asperiores ducimus.
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium nam deleniti at enim aut amet accusamus dolore illo. Sequi voluptatum perspiciatis laboriosam eum assumenda error corrupti consequuntur quod provident ducimus.
+        </h3>
       </section>
+
+      <Footer></Footer>
     </div>
   )
 }
