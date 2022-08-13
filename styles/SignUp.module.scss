@@ -1,1 +1,109 @@
 @import './globalVariable.scss';
+
+.SignUp{
+    color: $accent-color-dark;
+    position: relative;
+    display: grid;
+    place-items: flex-end;
+    height: 100vh;
+    width: 100vw;
+    & > h1 {
+        font-size: 8rem;
+        margin: 0px;
+        position: absolute;
+        left: 25vw;
+        font-weight: 800;
+        // font-family: ???;
+        z-index: 2;
+        top: 2.5vh;
+    }
+    & > div {
+        z-index: 1;
+        margin-bottom: 12.5vh;
+        margin-right: 25vw;
+        width: Max(30vw, 300px);
+        height: 75vh;
+        border-radius: 0.5rem;
+        box-shadow: 0px 10px 20px 5px rgba($accent-color, 0.25);
+        display: flex;
+        flex-direction: column;
+        & > div {
+            flex: 1;
+            &:first-of-type {
+                display: grid;
+                place-items: flex-start center;
+                position: relative;
+                & > div{
+                    width: 100%;
+                    margin-top: 17.5%;
+                    & > input {
+                        width: 80%;
+                        margin: auto;
+                        display: block;
+                        padding: 2.5vh 1vw;
+                        border-radius: 0.5rem;
+                        border: 0px;
+                        background-color: #F0F0F0;
+                        color: #909090;
+                        font-size: 1.25rem;
+                        &:last-of-type{
+                            margin-top: 4vh;
+                        }
+                        &::placeholder {
+                            color: #909090;
+                            font-size: 1.25rem;
+                            font-weight: 800px;
+                        }
+                    }
+
+                }
+            }
+            &:last-of-type {
+                text-align: center;
+                margin-bottom: 2.5rem;
+                width: 100%;
+                position: relative;
+                & > div {
+                    display: grid;
+                    place-items: flex-end center;
+                    height: 100%;
+                    & > div {
+                        width: 100%;
+                        & > button {
+                            width: 80%;
+                            padding: 2.5vh 0vh;
+                            font-size: 2rem;
+                            background-color: $accent-color-dark;
+                            color: $primary-color;
+                            border: solid 1px $primary-color;
+                            border-radius: 0.5rem;
+                            margin-bottom: 1rem;
+                            cursor: pointer;
+                            transition: all ease-out 0.25s;
+                            &:hover{
+                                background-color: $primary-color;
+                                border: solid 1px $accent-color;
+                                color: $accent-color;
+                            }
+                        }
+                        & > p {
+                            margin: 0px;
+                            font-weight: 400px;
+                            cursor: pointer;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1500px) {
+    .SignUp {
+        & > h1 {
+            top: 7.5vh;
+            left: 38vw;
+            font-size: 5rem;
+        }
+    }
+}
