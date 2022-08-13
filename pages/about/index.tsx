@@ -19,10 +19,11 @@ const About: NextPage = () => {
       <section className={scss.about}>
         <h1> About Us</h1>
         <h3> 
-          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Magni culpa animi quibusdam. Animi ad aliquam nostrum temporibus a vero libero aperiam incidunt architecto cumque repellendus perferendis, quasi beatae voluptatem quae!
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus culpa nesciunt tempora voluptatibus iste ipsum inventore nemo, beatae vel, exercitationem placeat ab optio cum est. Tempore fuga mollitia asperiores ducimus.
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium nam deleniti at enim aut amet accusamus dolore illo. Sequi voluptatum perspiciatis laboriosam eum assumenda error corrupti consequuntur quod provident ducimus.
+        Our website is open to anyone who is curious to learn. Everyone should be able to learn something new when they come into our website 
+        and explore new possbility on different fields. The goal of our website is to resolve the education gap that exist in the United States 
+        by allowing everyone to access our website that will contain many useful information on different fields.
         </h3>
+
       </section>
 
       <Footer></Footer>

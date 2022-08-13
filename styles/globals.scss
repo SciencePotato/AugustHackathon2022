@@ -1,5 +1,26 @@
 @import './globalVariable.scss';
 
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: $primary-color;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: $accent-color-dark;
+  transition: all ease-out 0.25s;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: $accent-color-light;
+}
+
 html,
 body {
   padding: 0;
