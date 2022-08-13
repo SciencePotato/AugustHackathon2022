@@ -36,7 +36,7 @@ const Post: NextPage = () => {
     
     const router = useRouter();
     const id = router.query;
-    const idNum = parseInt(id.ID!.toString());
+    const idNum = (id == null || id == undefined)? 0: parseInt(id.ID!.toString());
     
     return (
         <> 
