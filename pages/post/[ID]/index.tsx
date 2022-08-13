@@ -3,6 +3,7 @@ import { useRouter } from "next/router";
 import Link from 'next/link';
 import Nav from '../../../component/navbar';
 import scss from '../../../styles/post.module.scss'
+import { useEffect, useState } from "react";
 
 const fakeData =  [
     {
@@ -35,17 +36,19 @@ const fakeData =  [
 const Post: NextPage = () => {
     
     const router = useRouter();
-    const id = router.query;
-    const idNum = (id == null || id == undefined)? 0: parseInt(id.ID!.toString());
-    
+    let id;
+    const [data, setData] = useState(fakeData[0]);
+    useEffect(()=>{
+        if(!router.isReady) return;
+        id = router.query;
+        setData(fakeData[parseInt(id.ID!.toString()) - 1]);
+    }, [router.isReady]);
+
     return (
         <> 
             <Nav num={1}></Nav>
             <h1>
-                {
-                    id.ID != null && 
-                    (<h2> {fakeData[idNum - 1].title} </h2>)
-                }
+              {data.title}
             </h1>
         </>
     );
