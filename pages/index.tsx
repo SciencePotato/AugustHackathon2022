@@ -60,6 +60,41 @@ const fakeData =  [
     comments: 10,
     likes: 59,
   },
+  {
+    id: 8,
+    title: "This is the fifth article",
+    content: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi quo, commodi tempora quam eveniet nihil. Ad commodi, eum deleniti, reiciendis at dolorem et earum blanditiis incidunt nihil impedit iure ea!",
+    comments: 10,
+    likes: 59,
+  },
+  {
+    id: 9,
+    title: "This is the fifth article",
+    content: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi quo, commodi tempora quam eveniet nihil. Ad commodi, eum deleniti, reiciendis at dolorem et earum blanditiis incidunt nihil impedit iure ea!",
+    comments: 10,
+    likes: 59,
+  },
+  {
+    id: 10,
+    title: "This is the fifth article",
+    content: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi quo, commodi tempora quam eveniet nihil. Ad commodi, eum deleniti, reiciendis at dolorem et earum blanditiis incidunt nihil impedit iure ea!",
+    comments: 10,
+    likes: 59,
+  },
+  {
+    id: 11,
+    title: "This is the fifth article",
+    content: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi quo, commodi tempora quam eveniet nihil. Ad commodi, eum deleniti, reiciendis at dolorem et earum blanditiis incidunt nihil impedit iure ea!",
+    comments: 10,
+    likes: 59,
+  },
+  {
+    id: 12,
+    title: "This is the fifth article",
+    content: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi quo, commodi tempora quam eveniet nihil. Ad commodi, eum deleniti, reiciendis at dolorem et earum blanditiis incidunt nihil impedit iure ea!",
+    comments: 10,
+    likes: 59,
+  },
 ];
 
 const Home: NextPage = () => {

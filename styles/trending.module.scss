@@ -4,6 +4,7 @@
   position: relative;
   width: 100vw;
   height: 500px;
+  margin: 10rem 0rem;
   & > h1 {
     text-align: center;
     color: $accent-color-dark;
@@ -30,4 +31,12 @@
     display: none;
   }
 
+}
+
+@media screen and (max-width: 1000px) {
+  .trending {
+    & > h1 {
+      font-size: 4rem;
+    }
+  }
 }
