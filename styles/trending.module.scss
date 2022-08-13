@@ -3,20 +3,20 @@
 .trending {
   position: relative;
   width: 100vw;
-  height: 500px;
+  height: 600px;
   & > h1 {
     text-align: center;
     color: $accent-color-dark;
     font-size: 9rem;
     
     position: relative;
-    top: -100px;
+    top: 0px;
     margin: 0;
   }
   & > div {
     margin: 0;
-    position: absolute;
-    top: 0;
+    position: relative;
+    top: -70px;
     width: 100vw;
 
     display: flex;
