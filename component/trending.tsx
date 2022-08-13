@@ -17,7 +17,7 @@ interface Props {
 
 const Trending: NextPage<Props> = (props) => {
   return (
-    <div className='trending'>
+    <div className={scss.trending}>
       <h1 className='trending-title'>Trending Now</h1>
       <div className='trending-card-container'>
         {props.data.map(post =>

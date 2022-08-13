@@ -46,6 +46,20 @@ const fakeData =  [
     comments: 10,
     likes: 59,
   },
+  {
+    id: 6,
+    title: "This is the fifth article",
+    content: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi quo, commodi tempora quam eveniet nihil. Ad commodi, eum deleniti, reiciendis at dolorem et earum blanditiis incidunt nihil impedit iure ea!",
+    comments: 10,
+    likes: 59,
+  },
+  {
+    id: 7,
+    title: "This is the fifth article",
+    content: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi quo, commodi tempora quam eveniet nihil. Ad commodi, eum deleniti, reiciendis at dolorem et earum blanditiis incidunt nihil impedit iure ea!",
+    comments: 10,
+    likes: 59,
+  },
 ];
 
 const Home: NextPage = () => {

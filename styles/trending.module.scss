@@ -1,0 +1,33 @@
+@import './globalVariable.scss';
+
+.trending {
+  position: relative;
+  width: 100vw;
+  height: 500px;
+  & > h1 {
+    text-align: center;
+    color: $accent-color-dark;
+    font-size: 9rem;
+    
+    position: relative;
+    top: -100px;
+    margin: 0;
+  }
+  & > div {
+    margin: 0;
+    position: absolute;
+    top: 0;
+    width: 100vw;
+
+    display: flex;
+    flex-direction: row;
+    overflow-x: scroll !important;
+
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+  }
+  & > div::-webkit-scrollbar {
+    display: none;
+  }
+
+}
