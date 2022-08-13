@@ -1,10 +1,9 @@
 import type { NextPage } from 'next';
 import Head from 'next/head';
 import Image from 'next/image';
-import Link from 'next/link';
-import styles from '../styles/Welcome.module.scss';
+import styles from '../../styles/about.module.scss';
 
-const Home: NextPage = () => {
+const About: NextPage = () => {
   return (
     <div className={styles.container}>
       <Head>
@@ -70,4 +69,4 @@ const Home: NextPage = () => {
   )
 }
 
-export default Home
+export default About
