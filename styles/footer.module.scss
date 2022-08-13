@@ -1,0 +1,42 @@
+@import './globalVariable.scss';
+
+.footer {
+    background-color: $secondary-color;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10vh 0vh;
+    padding-bottom: 30vh;
+    & > div {
+        flex: 1;
+        min-width: 25rem;
+        & > div {
+            text-align: right;
+            & > h1 {
+                color: $accent-color-dark;
+                margin: 0px;
+                margin-right: 5vw;
+                font-size: 4rem;
+                font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            }
+        }
+        & > h1 {
+            color: $primary-color;
+            margin: 0px;
+            margin-top: 1.5vh;
+            &:hover {
+                color: $accent-color;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 50rem) {
+    .footer {
+        & > div {
+            & > div {
+                text-align: center;
+            }
+        }
+    }
+    
+}
