@@ -9,5 +9,3 @@ const Nav: NextPage = () => {
 }
 
 export default Nav
-
-
