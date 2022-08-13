@@ -35,8 +35,8 @@ const fakeData =  [
 const Post: NextPage = () => {
     
     const router = useRouter();
-    const id = router.query;
-    const idNum = (id == null || id == undefined)? 0: id.ID;
+    const id = (router.query === null || router.query === undefined)? {ID: "0"}:router.query!;
+    const idNum = (id === null || id === undefined)? "0": id.ID!.toString();
     
     return (
         <> 
