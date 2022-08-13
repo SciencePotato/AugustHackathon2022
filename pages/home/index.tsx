@@ -5,6 +5,8 @@ import Footer from '../../component/footer';
 import Nav from '../../component/navbar';
 import Trending from '../../component/trending';
 import Image from 'next/image';
+import image from "../../public/zikunw.jpg";
+import { useState } from 'react';
 
 const fakeData =  [
   {
@@ -93,9 +95,9 @@ const fakeData =  [
   },
 ];
 
-import image from "../../public/zikunw.jpg";
-
 const Home: NextPage = () => {
+  const [loggedIn, setLoggedIn] = useState(true);
+
   return (
     <>
       <Head>
@@ -107,10 +109,15 @@ const Home: NextPage = () => {
       <Nav num={1}></Nav>
       
       <section className={scss.home}>
-        <div>
-          <Image src={image} width={100} height={100}></Image>
-
-        </div>
+        {
+          loggedIn &&
+          (
+            <div>
+              <Image src={image} className={scss.round} width={200} height={200}></Image>
+              <h1>Hi, Zikun. Wanna ask a <span>question</span>?</h1>
+            </div>
+          )
+        }
         <Trending data={fakeData}/>
       </section>
 
