@@ -2,9 +2,9 @@ import type { NextPage } from 'next';
 import Head from 'next/head';
 import Image from 'next/image';
 import Link from 'next/link';
-import styles from '../../styles/post.module.scss';
+import styles from '../../styles/create.module.scss';
 
-const Post: NextPage = () => {
+const Create: NextPage = () => {
   return (
     <div className={styles.container}>
       <Head>
@@ -33,4 +33,4 @@ const Post: NextPage = () => {
   )
 }
 
-export default Post
+export default Create
