@@ -1,1 +1,12 @@
-@import './globalVariable.scss' 
+@import './globalVariable.scss';
+
+
+
+  .errorOne{
+    color: $accent-color-dark;
+    position: relative;
+    text-align: center;
+    padding: 50px 0 50px;
+    font-weight: bold;
+    font-size: 80px;
+  }
