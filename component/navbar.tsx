@@ -2,7 +2,11 @@ import type { NextPage } from 'next';
 import Link from 'next/link';
 import scss from '../styles/header.module.scss'
 
-const Nav: NextPage = (props: {num?: Number}) => {
+interface Props {
+  num: Number;
+}
+
+const Nav: NextPage<Props> = (props) => {
   const currentPage = props.num;
   
   return (

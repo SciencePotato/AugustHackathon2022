@@ -5,6 +5,7 @@ import Footer from '../../component/footer';
 import scss from '../../styles/about.module.scss';
 
 const About: NextPage = () => {
+
   return (
     <div>
       <Head>
