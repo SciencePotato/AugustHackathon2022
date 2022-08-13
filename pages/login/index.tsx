@@ -4,6 +4,35 @@ import Link from 'next/link';
 import scss from './../../styles/Login.module.scss';
 
 const Login: NextPage = () => {
+  const signin = ()=>{
+    const app = initializeApp(config.firebaseConfig);
+
+    const qz_auth = getAuth();
+
+    let btnSignIn = document.getElementById('btnSignIn');
+    let TextEmail = document.getElementById('txtEmail') as HTMLInputElement;
+    let TextPassword = document.getElementById('txtPassword') as HTMLInputElement;
+    
+    var email = TextEmail?.value;
+    var password = TextPassword?.value;
+    
+    btnSignIn?.addEventListener('click', function handleClick(event) {
+      console.log('button clicked');
+      signInWithEmailAndPassword(qz_auth, email, password)
+      .then((userCredential) => {
+        // Signed in 
+        const user = userCredential.user;
+        console.log("successful");
+        // ...
+      })
+      .catch((error) => {
+        const errorCode = error.code;
+        const errorMessage = error.message;
+        console.log("failed to", errorCode, errorMessage);
+      });
+    
+    });
+    }
   return (
     <div>
       <Head>
