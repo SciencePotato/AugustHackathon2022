@@ -36,7 +36,7 @@ const Post: NextPage = () => {
     
     const router = useRouter();
     const id = router.query;
-    const idNum = (id == null || id == undefined)? 0: parseInt(id.ID!.toString());
+    const idNum = (id == null || id == undefined)? 0: id.ID;
     
     return (
         <> 
@@ -44,7 +44,7 @@ const Post: NextPage = () => {
             <h1>
                 {
                     id.ID != null && 
-                    (<h2> {fakeData[idNum - 1].title} </h2>)
+                    (<h2> {fakeData[parseInt(idNum) - 1].title} </h2>)
                 }
             </h1>
         </>
