@@ -16,7 +16,7 @@ function Error() {
     <p className={scss.errorThree}>
             <Link href={"/home"}> 
                 <button className={scss.button}>
-                    Back to the Home Page
+                    Back to the Home Page :&#40;
                 </button>
             </Link>
     </p>
