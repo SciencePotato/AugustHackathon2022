@@ -3,8 +3,33 @@ import Head from 'next/head';
 import Image from 'next/image';
 import Link from 'next/link';
 import styles from '../../styles/Home.module.scss';
+import { getAuth,onAuthStateChanged } from "firebase/auth";
+import { useEffect } from 'react';
+import { initializeApp } from "firebase/app";
+import {config} from './../../component/database/config';
 
 const Home: NextPage = () => {
+  const getUser = ()=>{
+    const app = initializeApp(config.firebaseConfig);
+    const auth = getAuth();
+    onAuthStateChanged(auth, (user) => {
+    if (user) {
+    // User is signed in, see docs for a list of available properties
+    // https://firebase.google.com/docs/reference/js/firebase.User
+    const uid = user.uid;
+
+    console.log(user);
+    // ...
+    } else {
+    // User is signed out
+    // ...
+    }
+  });
+  }
+  useEffect(() => {
+    getUser();
+  }, [])
+  
   return (
     <div className={styles.container}>
       <Head>

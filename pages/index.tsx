@@ -4,8 +4,16 @@ import Image from 'next/image';
 import Link from 'next/link';
 import Footer from '../component/footer'
 import styles from '../styles/Welcome.module.scss';
+import { initializeApp } from "firebase/app";
+import { getAuth } from "firebase/auth";
+
+import {config} from './../component/database/config';
+import { useEffect } from 'react';
 
 const Home: NextPage = () => {
+  {/*useEffect(()=>{
+    const app = initializeApp(config.firebaseConfig);
+  },[])*/}
   return (
     <div>
       <Head>

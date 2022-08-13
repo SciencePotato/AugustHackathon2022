@@ -3,7 +3,42 @@ import Head from 'next/head';
 import Link from 'next/link';
 import scss from './../../styles/Login.module.scss';
 
+import { signInWithEmailAndPassword } from "firebase/auth";
+import { initializeApp } from "firebase/app";
+import { getAuth } from "firebase/auth";
+import {config} from './../../component/database/config';
+
 const Login: NextPage = () => {
+  const signin = ()=>{
+    const app = initializeApp(config.firebaseConfig);
+
+    const qz_auth = getAuth();
+
+    let btnSignIn = document.getElementById('btnSignIn');
+    let TextEmail = document.getElementById('txtEmail') as HTMLInputElement;
+    let TextPassword = document.getElementById('txtPassword') as HTMLInputElement;
+    
+    var email = TextEmail?.value;
+    var password = TextPassword?.value;
+    
+    btnSignIn?.addEventListener('click', function handleClick(event) {
+      console.log('button clicked');
+      signInWithEmailAndPassword(qz_auth, email, password)
+      .then((userCredential) => {
+        // Signed in 
+        const user = userCredential.user;
+        console.log("successful");
+        // ...
+      })
+      .catch((error) => {
+        const errorCode = error.code;
+        const errorMessage = error.message;
+        console.log("failed to", errorCode, errorMessage);
+      });
+    
+    });
+    }
+
   return (
     <div>
       <Head>
@@ -17,18 +52,20 @@ const Login: NextPage = () => {
         <div>
           <div>
             <div>
-              <input type="text" placeholder='Username'/>
-              <input type="password" placeholder='Email Address'/>
+              <input type="text" placeholder='Email' id='txtEmail'/>
+              <input type="password" placeholder='Password' id='txtPassword'/>
             </div>
           </div>
           <div>
             <div>
               <div>
-                <Link href={"/home"}> 
-                  <button>
+                {/* This is authentication */}
+
+                {/*<Link href={"/home"}>*/}
+                  <button id='btnSignIn' onClick={signin}>
                     Login
                   </button>
-                </Link>
+                {/*</Link>*/}
                 <p>
                   <Link href={"/signup"}> Don&apos;t have an account? Join us now!</Link>
                 </p>
@@ -38,6 +75,7 @@ const Login: NextPage = () => {
         </div>
       </section>
     </div>
+    
   )
 }
 
