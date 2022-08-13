@@ -1,6 +1,5 @@
 import type { NextPage } from 'next';
 import Head from 'next/head';
-import Image from 'next/image';
 import Link from 'next/link';
 import scss from './../../styles/Login.module.scss';
 
@@ -31,7 +30,7 @@ const Login: NextPage = () => {
                   </button>
                 </Link>
                 <p>
-                  <Link href={"/signup"}> Don't have an account? Join us now!</Link>
+                  <Link href={"/signup"}> Don&apos;t have an account? Join us now!</Link>
                 </p>
               </div>
             </div>
