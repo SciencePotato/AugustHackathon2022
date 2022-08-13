@@ -13,14 +13,13 @@ function Error() {
        <br></br>Try again.
     </p>
     
-        <p className={scss.errorThree}>
+    <p className={scss.errorThree}>
             <Link href={"/home"}> 
-                <button className="button">
+                <button className={scss.button}>
                     Back to the Home Page
                 </button>
             </Link>
-        </p>
-    
+    </p>
         
     </>       
     );
