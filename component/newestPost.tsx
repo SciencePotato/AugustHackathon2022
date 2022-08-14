@@ -23,8 +23,8 @@ const NewestPost: NextPage<Props> = ({ data }) => {
     <div className={scss.newestPost}>
       <h1>Newest Questions</h1>
       <div>
-      {data.map(post =>
-          <PostCard post={post} />
+      {data.map(post => 
+          (<PostCard post={post} key={post.id}/>)
         )}
       </div>
     </div>

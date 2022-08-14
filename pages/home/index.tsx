@@ -8,6 +8,10 @@ import Footer from '../../component/footer';
 import image from "../../public/zikunw.jpg";
 import { useState } from 'react';
 import NewestPost from "../../component/newestPost";
+import { getAuth,onAuthStateChanged } from "firebase/auth";
+import { useEffect } from 'react';
+import { initializeApp } from "firebase/app";
+import {config} from './../../component/database/config';
 
 interface postData {
   id: number,
@@ -145,7 +149,26 @@ const fakeData: postData[] =  [
 
 const Home: NextPage = () => {
   const [loggedIn, setLoggedIn] = useState(true);
+  const getUser = ()=>{
+    const app = initializeApp(config.firebaseConfig);
+    const auth = getAuth();
+    onAuthStateChanged(auth, (user) => {
+    if (user) {
+    // User is signed in, see docs for a list of available properties
+    // https://firebase.google.com/docs/reference/js/firebase.User
+    const uid = user.uid;
 
+    console.log(user);
+    // ...
+    } else {
+    // User is signed out
+    // ...
+    }
+  });
+  }
+  useEffect(() => {
+    getUser();
+  }, [])
   return (
     <>
       <Head>
@@ -166,7 +189,7 @@ const Home: NextPage = () => {
           )
         }
       
-        <Trending data={fakeData.slice(1, 5)}/>
+        <Trending data={fakeData.slice(1, 12)}/>
       </section>
       
       <Footer></Footer>

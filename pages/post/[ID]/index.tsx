@@ -16,6 +16,10 @@ interface postData {
   tags: string[],
 }
 
+interface Props {
+  post: postData;
+}
+
 const fakeData: postData[] =  [
   {
     id: 1,
@@ -24,8 +28,8 @@ const fakeData: postData[] =  [
     content: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi quo, commodi tempora quam eveniet nihil. Ad commodi, eum deleniti, reiciendis at dolorem et earum blanditiis incidunt nihil impedit iure ea!",
     comments: 10,
     likes: 59,
-    date: "2022 July 17th 16:00",
-    tags: ["computer", "beginner-friendly", "college"],
+    date: "2022-7-30 6:00PM",
+    tags: ["programming", "beginner-friendly", "cool project"],
   },
   {
     id: 2,
@@ -34,8 +38,8 @@ const fakeData: postData[] =  [
     content: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi quo, commodi tempora quam eveniet nihil. Ad commodi, eum deleniti, reiciendis at dolorem et earum blanditiis incidunt nihil impedit iure ea!",
     comments: 10,
     likes: 59,
-    date: "2022 July 17th 16:00",
-    tags: ["computer", "beginner-friendly", "college"],
+    date: "2022-7-30 6:00PM",
+    tags: ["programming", "beginner-friendly", "cool project"],
   },
   {
     id: 3,
@@ -44,8 +48,8 @@ const fakeData: postData[] =  [
     content: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi quo, commodi tempora quam eveniet nihil. Ad commodi, eum deleniti, reiciendis at dolorem et earum blanditiis incidunt nihil impedit iure ea!",
     comments: 10,
     likes: 59,
-    date: "2022 July 17th 16:00",
-    tags: ["computer", "beginner-friendly", "college"],
+    date: "2022-7-30 6:00PM",
+    tags: ["programming", "beginner-friendly", "cool project"],
   },
   {
     id: 4,
@@ -54,8 +58,8 @@ const fakeData: postData[] =  [
     content: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi quo, commodi tempora quam eveniet nihil. Ad commodi, eum deleniti, reiciendis at dolorem et earum blanditiis incidunt nihil impedit iure ea!",
     comments: 10,
     likes: 59,
-    date: "2022 July 17th 16:00",
-    tags: ["computer", "beginner-friendly", "college"],
+    date: "2022-7-30 6:00PM",
+    tags: ["programming", "beginner-friendly", "cool project"],
   },
   {
     id: 5,
@@ -64,8 +68,8 @@ const fakeData: postData[] =  [
     content: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi quo, commodi tempora quam eveniet nihil. Ad commodi, eum deleniti, reiciendis at dolorem et earum blanditiis incidunt nihil impedit iure ea!",
     comments: 10,
     likes: 59,
-    date: "2022 July 17th 16:00",
-    tags: ["computer", "beginner-friendly", "college"],
+    date: "2022-7-30 6:00PM",
+    tags: ["programming", "beginner-friendly", "cool project"],
   },
   {
     id: 6,
@@ -74,8 +78,8 @@ const fakeData: postData[] =  [
     content: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi quo, commodi tempora quam eveniet nihil. Ad commodi, eum deleniti, reiciendis at dolorem et earum blanditiis incidunt nihil impedit iure ea!",
     comments: 10,
     likes: 59,
-    date: "2022 July 17th 16:00",
-    tags: ["computer", "beginner-friendly", "college"],
+    date: "2022-7-30 6:00PM",
+    tags: ["programming", "beginner-friendly", "cool project"],
   },
   {
     id: 7,
@@ -84,8 +88,8 @@ const fakeData: postData[] =  [
     content: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi quo, commodi tempora quam eveniet nihil. Ad commodi, eum deleniti, reiciendis at dolorem et earum blanditiis incidunt nihil impedit iure ea!",
     comments: 10,
     likes: 59,
-    date: "2022 July 17th 16:00",
-    tags: ["computer", "beginner-friendly", "college"],
+    date: "2022-7-30 6:00PM",
+    tags: ["programming", "beginner-friendly", "cool project"],
   },
   {
     id: 8,
@@ -94,8 +98,8 @@ const fakeData: postData[] =  [
     content: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi quo, commodi tempora quam eveniet nihil. Ad commodi, eum deleniti, reiciendis at dolorem et earum blanditiis incidunt nihil impedit iure ea!",
     comments: 10,
     likes: 59,
-    date: "2022 July 17th 16:00",
-    tags: ["computer", "beginner-friendly", "college"],
+    date: "2022-7-30 6:00PM",
+    tags: ["programming", "beginner-friendly", "cool project"],
   },
   {
     id: 9,
@@ -104,8 +108,8 @@ const fakeData: postData[] =  [
     content: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi quo, commodi tempora quam eveniet nihil. Ad commodi, eum deleniti, reiciendis at dolorem et earum blanditiis incidunt nihil impedit iure ea!",
     comments: 10,
     likes: 59,
-    date: "2022 July 17th 16:00",
-    tags: ["computer", "beginner-friendly", "college"],
+    date: "2022-7-30 6:00PM",
+    tags: ["programming", "beginner-friendly", "cool project"],
   },
   {
     id: 10,
@@ -114,8 +118,8 @@ const fakeData: postData[] =  [
     content: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi quo, commodi tempora quam eveniet nihil. Ad commodi, eum deleniti, reiciendis at dolorem et earum blanditiis incidunt nihil impedit iure ea!",
     comments: 10,
     likes: 59,
-    date: "2022 July 17th 16:00",
-    tags: ["computer", "beginner-friendly", "college"],
+    date: "2022-7-30 6:00PM",
+    tags: ["programming", "beginner-friendly", "cool project"],
   },
   {
     id: 11,
@@ -124,8 +128,8 @@ const fakeData: postData[] =  [
     content: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi quo, commodi tempora quam eveniet nihil. Ad commodi, eum deleniti, reiciendis at dolorem et earum blanditiis incidunt nihil impedit iure ea!",
     comments: 10,
     likes: 59,
-    date: "2022 July 17th 16:00",
-    tags: ["computer", "beginner-friendly", "college"],
+    date: "2022-7-30 6:00PM",
+    tags: ["programming", "beginner-friendly", "cool project"],
   },
   {
     id: 12,
@@ -134,8 +138,8 @@ const fakeData: postData[] =  [
     content: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi quo, commodi tempora quam eveniet nihil. Ad commodi, eum deleniti, reiciendis at dolorem et earum blanditiis incidunt nihil impedit iure ea!",
     comments: 10,
     likes: 59,
-    date: "2022 July 17th 16:00",
-    tags: ["computer", "beginner-friendly", "college"],
+    date: "2022-7-30 6:00PM",
+    tags: ["programming", "beginner-friendly", "cool project"],
   },
 ];
 
