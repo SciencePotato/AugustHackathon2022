@@ -232,7 +232,7 @@ const Post: NextPage = () => {
                   </section>
                   <button className={scss.commentBtn}> 
                     <Link href={"/post/ID/comment"} as={`/post/${data.id}/comment`}>
-                      comment
+                      Answer this question
                     </Link>
                   </button>
                 </section>
