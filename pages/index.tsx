@@ -8,57 +8,139 @@ import Post from './post/[ID]';
 import styles from '../styles/Welcome.module.scss';
 import Trending from '../component/trending';
 import scss from '../styles/Welcome.module.scss';
+import PostCard from '../component/postCard';
 
+interface postData {
+  id: number,
+  title: string,
+  username: string,
+  content: string,
+  comments: number,
+  likes: number,
+  date: string,
+  tags: string[],
+}
 
-const fakeData =  [
+const fakeData: postData[] =  [
   {
     id: 1,
     title: "This is the first article",
+    username: "John Dwen",
     content: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi quo, commodi tempora quam eveniet nihil. Ad commodi, eum deleniti, reiciendis at dolorem et earum blanditiis incidunt nihil impedit iure ea!",
     comments: 10,
     likes: 59,
+    date: "2022-7-30 6:00PM",
+    tags: ["programming", "beginner-friendly", "cool project"],
   },
   {
     id: 2,
     title: "This is the second article",
+    username: "John Dwen",
     content: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi quo, commodi tempora quam eveniet nihil. Ad commodi, eum deleniti, reiciendis at dolorem et earum blanditiis incidunt nihil impedit iure ea!",
     comments: 10,
     likes: 59,
+    date: "2022-7-30 6:00PM",
+    tags: ["programming", "beginner-friendly", "cool project"],
   },
   {
     id: 3,
     title: "This is the third article",
+    username: "John Dwen",
     content: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi quo, commodi tempora quam eveniet nihil. Ad commodi, eum deleniti, reiciendis at dolorem et earum blanditiis incidunt nihil impedit iure ea!",
     comments: 10,
     likes: 59,
+    date: "2022-7-30 6:00PM",
+    tags: ["programming", "beginner-friendly", "cool project"],
   },
   {
     id: 4,
     title: "This is the fourth article",
+    username: "John Dwen",
     content: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi quo, commodi tempora quam eveniet nihil. Ad commodi, eum deleniti, reiciendis at dolorem et earum blanditiis incidunt nihil impedit iure ea!",
     comments: 10,
     likes: 59,
+    date: "2022-7-30 6:00PM",
+    tags: ["programming", "beginner-friendly", "cool project"],
   },
   {
     id: 5,
     title: "This is the fifth article",
+    username: "John Dwen",
     content: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi quo, commodi tempora quam eveniet nihil. Ad commodi, eum deleniti, reiciendis at dolorem et earum blanditiis incidunt nihil impedit iure ea!",
     comments: 10,
     likes: 59,
+    date: "2022-7-30 6:00PM",
+    tags: ["programming", "beginner-friendly", "cool project"],
   },
   {
     id: 6,
     title: "This is the fifth article",
+    username: "John Dwen",
     content: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi quo, commodi tempora quam eveniet nihil. Ad commodi, eum deleniti, reiciendis at dolorem et earum blanditiis incidunt nihil impedit iure ea!",
     comments: 10,
     likes: 59,
+    date: "2022-7-30 6:00PM",
+    tags: ["programming", "beginner-friendly", "cool project"],
   },
   {
     id: 7,
     title: "This is the fifth article",
+    username: "John Dwen",
     content: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi quo, commodi tempora quam eveniet nihil. Ad commodi, eum deleniti, reiciendis at dolorem et earum blanditiis incidunt nihil impedit iure ea!",
     comments: 10,
     likes: 59,
+    date: "2022-7-30 6:00PM",
+    tags: ["programming", "beginner-friendly", "cool project"],
+  },
+  {
+    id: 8,
+    title: "This is the fifth article",
+    username: "John Dwen",
+    content: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi quo, commodi tempora quam eveniet nihil. Ad commodi, eum deleniti, reiciendis at dolorem et earum blanditiis incidunt nihil impedit iure ea!",
+    comments: 10,
+    likes: 59,
+    date: "2022-7-30 6:00PM",
+    tags: ["programming", "beginner-friendly", "cool project"],
+  },
+  {
+    id: 9,
+    title: "This is the fifth article",
+    username: "John Dwen",
+    content: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi quo, commodi tempora quam eveniet nihil. Ad commodi, eum deleniti, reiciendis at dolorem et earum blanditiis incidunt nihil impedit iure ea!",
+    comments: 10,
+    likes: 59,
+    date: "2022-7-30 6:00PM",
+    tags: ["programming", "beginner-friendly", "cool project"],
+  },
+  {
+    id: 10,
+    title: "This is the fifth article",
+    username: "John Dwen",
+    content: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi quo, commodi tempora quam eveniet nihil. Ad commodi, eum deleniti, reiciendis at dolorem et earum blanditiis incidunt nihil impedit iure ea!",
+    comments: 10,
+    likes: 59,
+    date: "2022-7-30 6:00PM",
+    tags: ["programming", "beginner-friendly", "cool project"],
+  },
+  {
+    id: 11,
+    title: "This is the fifth article",
+    username: "John Dwen",
+    content: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi quo, commodi tempora quam eveniet nihil. Ad commodi, eum deleniti, reiciendis at dolorem et earum blanditiis incidunt nihil impedit iure ea!",
+    comments: 10,
+    likes: 59,
+    date: "2022-7-30 6:00PM",
+    tags: ["programming", "beginner-friendly", "cool project"],
+  },
+  {
+    id: 12,
+    title: "This is the fifth article",
+    username: "John Dwen",
+    content: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi quo, commodi tempora quam eveniet nihil. Ad commodi, eum deleniti, reiciendis at dolorem et earum blanditiis incidunt nihil impedit iure ea!",
+    comments: 10,
+    likes: 59,
+    date: "2022-7-30 6:00PM",
+    tags: ["programming", "beginner-friendly", "cool project"],
   },
 ];
 
@@ -104,7 +186,8 @@ const Home: NextPage = () => {
       </section>
 
       <Trending data={fakeData}/>
-      
+      <PostCard post={fakeData[0]} />
+
       <Footer></Footer>
     </>
   )
