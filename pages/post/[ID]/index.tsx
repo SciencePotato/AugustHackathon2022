@@ -173,7 +173,35 @@ const fakeAnswer = [
     date: "2022-7-30 6:00PM",
     content: `Hi, there answer and answer.
     I can provide useful weblink: www.youtube.com`,
-  }
+  },
+  {
+    username: "CoolGuy123",
+    likes: 12,
+    date: "2022-7-30 6:00PM",
+    content: `Hi, there answer and answer.
+    I can provide useful weblink: www.youtube.com`,
+  },
+  {
+    username: "CoolGuy123",
+    likes: 12,
+    date: "2022-7-30 6:00PM",
+    content: `Hi, there answer and answer.
+    I can provide useful weblink: www.youtube.com`,
+  },
+  {
+    username: "CoolGuy123",
+    likes: 12,
+    date: "2022-7-30 6:00PM",
+    content: `Hi, there answer and answer.
+    I can provide useful weblink: www.youtube.com`,
+  },
+  {
+    username: "CoolGuy123",
+    likes: 12,
+    date: "2022-7-30 6:00PM",
+    content: `Hi, there answer and answer.
+    I can provide useful weblink: www.youtube.com`,
+  },
 ]
 
 const Post: NextPage = () => {
@@ -212,13 +240,11 @@ const Post: NextPage = () => {
 
               <div className={scss.answers}>
                 <h1>Other answers:</h1>
-                {fakeAnswer.map(answer =>
-                    <Answer answer={answer} />
-                  )}
+                {fakeAnswer.map((answer, i) => 
+                  <Answer answer={answer} key={i} />
+                )}
               </div>
             </section>
-
-
 
             <Footer></Footer>
         </>
