@@ -59,6 +59,9 @@
                         background-color: $accent-color;
                         color: $primary-color;
                         border-radius: 1rem;
+                        &:hover {
+                            color: $primary-color;
+                        }
                     }
                     &:hover{
                         color: $accent-color;

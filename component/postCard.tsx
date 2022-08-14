@@ -1,6 +1,16 @@
 import type { NextPage } from 'next';
 import Link from 'next/link';
 import scss from '../styles/postCard.module.scss';
+import Image from 'next/image';
+
+import image1 from  '../public/stock-photos/stock-photo-00001.jpg';
+import image2 from  '../public/stock-photos/stock-photo-00002.jpg';
+import image3 from  '../public/stock-photos/stock-photo-00003.jpg';
+import image4 from  '../public/stock-photos/stock-photo-00004.jpg';
+import image5 from  '../public/stock-photos/stock-photo-00005.jpg';
+import image6 from  '../public/stock-photos/stock-photo-00006.jpg';
+
+const imgs = [image1, image2, image3, image4, image5, image6];
 
 interface postData {
   id: number,
@@ -22,7 +32,9 @@ const PostCard: NextPage<Props> = ({ post }) => {
     <Link href={"/post/ID"} as={`/post/${parseInt(post.id.toString()) - 1}`}>
       <div className={scss.postCard}>
         <div className={scss.imgContainer}>
-          <div className={scss.img}></div>
+          <div className={scss.img}>
+            <Image src={imgs[post.id % 6]} className={scss.round} width={140} height={140}></Image>
+          </div>
         </div>
         <div className={scss.content}>
           <h2 className={scss.title}>{post.title}</h2>
