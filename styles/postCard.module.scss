@@ -1,0 +1,94 @@
+@import './globalVariable.scss';
+
+.postCard {
+  box-sizing: border-box;
+
+  position: relative;
+  width: max(50vw, 300px);
+  height: 200px;
+
+  margin: 20px auto;
+
+  background: #FFFFFF;
+  /* subtle-border */
+  border: 1px solid #C2C5D5;
+  border-radius: 25px;
+
+  display: grid;
+  grid-template-columns: 200px 1fr;
+}
+
+.imgContainer {
+  border-radius: 25px 0px 0px 25px;
+
+}
+
+.img {
+  background-color: $accent-color-light;
+
+  position: relative;
+  top: 30px;
+  left: 30px;
+  width: 140px;
+  height: 140px;
+
+  border-radius: 25px;
+}
+
+.content {
+  border-radius: 0px 25px 25px 0px;
+
+  padding: 30px 30px 30px 0px;
+
+  height: 200px;
+}
+
+.title {
+  margin: 0;
+  font-size: 2rem;
+}
+
+.username {
+  margin: 0;
+  color: grey;
+}
+
+.bottom {
+  position: absolute;
+  bottom: 30px;
+  right: 30px;
+
+  width: 80%;
+
+  display:grid;
+  grid-template-columns: 1fr 1fr;
+  
+}
+
+.tags {
+  justify-self: start;
+}
+
+.stats {
+  width: 130px;
+  height: 25px;
+
+  justify-self: end;
+
+  margin-left: auto; 
+  margin-right: 0;
+
+  padding: 2.5px;
+
+  color: grey;
+  fill: grey;
+
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.statsElement {
+  justify-self: center;
+  text-align: center;
+  margin: 0;
+}

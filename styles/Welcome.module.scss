@@ -88,25 +88,3 @@
     }
   }
 }
-
-@media screen and (max-width: 1000px) {
-.Welcome {
-  & > section {
-    & > div {
-      min-width: 25rem;
-      &:first-of-type{
-        & > h1 {
-          font-size: 4rem;
-        }
-        & > div {
-          & > button {
-            font-size: 1.5rem;
-          }
-        }
-      }
-    }
-  }
-}
-
-  
-}

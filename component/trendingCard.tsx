@@ -5,9 +5,12 @@ import scss from '../styles/trendingCard.module.scss';
 interface postData {
   id: number,
   title: string,
+  username: string,
   content: string,
   comments: number,
   likes: number,
+  date: string,
+  tags: string[],
 }
 
 interface Props {
