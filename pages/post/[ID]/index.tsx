@@ -5,6 +5,21 @@ import Nav from '../../../component/navbar';
 import scss from '../../../styles/post.module.scss'
 import { useEffect, useState } from "react";
 
+interface postData {
+  id: number,
+  title: string,
+  username: string,
+  content: string,
+  comments: number,
+  likes: number,
+  date: string,
+  tags: string[],
+}
+
+interface Props {
+  post: postData;
+}
+
 const fakeData: postData[] =  [
   {
     id: 1,
