@@ -1,6 +1,6 @@
 import type { NextPage } from 'next';
 import Link from 'next/link';
-import scss from '../styles/postCard.module.scss';
+import scss from '../styles/newestPost.module.scss';
 import PostCard from './postCard';
 
 interface postData {
@@ -18,13 +18,17 @@ interface Props {
   data: postData[];
 }
 
-const newestPost: NextPage<Props> = ({ data }) => {
+const NewestPost: NextPage<Props> = ({ data }) => {
   return (
-    <div>
+    <div className={scss.newestPost}>
       <h1>Newest Questions</h1>
+      <div>
       {data.map(post =>
           <PostCard post={post} />
         )}
+      </div>
     </div>
   )
-}
+};
+
+export default NewestPost;

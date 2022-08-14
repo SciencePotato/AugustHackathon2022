@@ -9,6 +9,7 @@ import styles from '../styles/Welcome.module.scss';
 import Trending from '../component/trending';
 import scss from '../styles/Welcome.module.scss';
 import PostCard from '../component/postCard';
+import NewestPost from "../component/newestPost";
 
 interface postData {
   id: number,
@@ -186,7 +187,7 @@ const Home: NextPage = () => {
       </section>
 
       <Trending data={fakeData}/>
-      <PostCard post={fakeData[0]} />
+      <NewestPost data={fakeData}/>
 
       <Footer></Footer>
     </>

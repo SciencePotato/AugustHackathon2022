@@ -7,6 +7,7 @@ import Nav from '../../component/navbar';
 import Footer from '../../component/footer';
 import image from "../../public/zikunw.jpg";
 import { useState } from 'react';
+import NewestPost from "../../component/newestPost";
 
 interface postData {
   id: number,
