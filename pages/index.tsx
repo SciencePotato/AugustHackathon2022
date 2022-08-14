@@ -187,7 +187,7 @@ const Home: NextPage = () => {
       </section>
 
       <Trending data={fakeData}/>
-      <NewestPost data={fakeData}/>
+      <NewestPost data={fakeData.slice(1, 5)}/>
 
       <Footer></Footer>
     </>
