@@ -26,6 +26,9 @@ const Nav: NextPage<Props> = (props) => {
               <h2> 
                 <Link href={"/about"}> About </Link>
               </h2>
+              <h2> 
+              <Link href={"/profile"}> Profile </Link>
+              </h2>
             </>
           }
           {
@@ -37,6 +40,9 @@ const Nav: NextPage<Props> = (props) => {
               <h2 className={scss.active}> 
                 <Link href={"/about"} > About </Link>
               </h2>
+              <h2> 
+              <Link href={"/profile"}> Profile </Link>
+              </h2>
             </>
           }
           {
@@ -44,6 +50,9 @@ const Nav: NextPage<Props> = (props) => {
             <>
             <h2> 
                 <Link href={"/home"}> Homepage </Link>
+              </h2>
+              <h2>
+                <Link href={"/about"}> About </Link>
               </h2>
               <h2 className={scss.active}> 
                 <Link href={"/profile"} > Profile </Link>
@@ -65,7 +74,7 @@ const Nav: NextPage<Props> = (props) => {
             </Link>
           </h2>
           <h2>
-            <Link href={"/profile"}>
+            <Link href={"/setting"}>
               Setting
             </Link>
           </h2>
