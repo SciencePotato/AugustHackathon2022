@@ -55,6 +55,11 @@
                     display: inline-block;
                     cursor: pointer;
                     transition: all ease-out 0.25s;
+                    &.active {
+                        background-color: $accent-color;
+                        color: $primary-color;
+                        border-radius: 1rem;
+                    }
                     &:hover{
                         color: $accent-color;
                     }

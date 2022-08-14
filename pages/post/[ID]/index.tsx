@@ -220,7 +220,7 @@ const Post: NextPage = () => {
             <Nav num={1}></Nav>
             <section className={scss.comment}>
               <section>
-                <Link href={"/post/ID"} as={`/post/${data.id}`}> 
+                <Link href={"/home"}> 
                   <button className={scss.backBtn}>
                     Back
                   </button>

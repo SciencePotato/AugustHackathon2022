@@ -2,14 +2,15 @@ import type { NextPage } from 'next';
 import Head from 'next/head';
 import Nav from '../../component/navbar';
 import Footer from '../../component/footer';
-import scss from '../../styles/profile.module.scss';
-
+import scss from '../../styles/setting.module.scss';
+import { useState } from "react";
+import Image from 'next/image';
 const Setting: NextPage = () => {
 
   
   
     return ( <>
-      <div>
+      <div >
         
         <Head>
         <title> Setting </title>
@@ -17,7 +18,30 @@ const Setting: NextPage = () => {
           <link rel="icon" href="/favicon.ico" />
         </Head>
         <Nav num={5}></Nav>
-        
+        <section className={scss.setting}>
+       
+            <div> <h1> 
+                <form > 
+                    Username&nbsp;&nbsp;
+                    <input type="text" name="username" className={scss.button}></input>
+                    <br></br>
+                    Profile description<br></br>
+                    <textarea name="Profile Des" rows={5} cols={30} className={scss.button}></textarea><br></br>
+                    Profile Picture <br></br>
+                    <span>
+                        <Image src="/zikunw.jpg" alt="User Profile" width={240} height={240} className={scss.round}></Image>        </span>
+                    <br></br> 
+                    <button className={scss.picButton}>
+                    Choose a Picture
+                    </button> <br></br><br></br>
+                    <input type="submit" value="Save Changes" className={scss.submit} ></input>
+
+                </form>
+               
+            </h1></div>
+
+        </section>
+
         <Footer></Footer>
       </div>
       </> );
