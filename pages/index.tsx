@@ -1,15 +1,10 @@
 import type { NextPage } from 'next';
 import Head from 'next/head';
-import Image from 'next/image';
 import Link from 'next/link';
 import Nav from '../component/navbar';
 import Footer from '../component/footer';
-import Post from './post/[ID]';
-import styles from '../styles/Welcome.module.scss';
 import Trending from '../component/trending';
 import scss from '../styles/Welcome.module.scss';
-import PostCard from '../component/postCard';
-import NewestPost from "../component/newestPost";
 
 interface postData {
   id: number,
@@ -187,7 +182,6 @@ const Home: NextPage = () => {
       </section>
 
       <Trending data={fakeData}/>
-      <NewestPost data={fakeData.slice(1, 5)}/>
 
       <Footer></Footer>
     </>

@@ -1,17 +1,10 @@
 import type { NextPage } from 'next';
-import Head from 'next/head';
-import Image from 'next/image';
-import scss from '../../styles/Home.module.scss';
-import Trending from '../../component/trending';
-import Nav from '../../component/navbar';
-import Footer from '../../component/footer';
-import image from "../../public/zikunw.jpg";
-import { useState } from 'react';
-import NewestPost from "../../component/newestPost";
-import { getAuth,onAuthStateChanged } from "firebase/auth";
-import { useEffect } from 'react';
-import { initializeApp } from "firebase/app";
-import {config} from './../../component/database/config';
+import { useRouter } from 'next/router';
+import { useEffect, useState } from 'react';
+import scss from '../../../../styles/comment.module.scss';
+import Footer from '../../../../component/footer';
+import Nav from '../../../../component/navbar';
+import Link from 'next/link';
 
 interface postData {
   id: number,
@@ -32,8 +25,8 @@ const fakeData: postData[] =  [
     content: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi quo, commodi tempora quam eveniet nihil. Ad commodi, eum deleniti, reiciendis at dolorem et earum blanditiis incidunt nihil impedit iure ea!",
     comments: 10,
     likes: 59,
-    date: "2022 July 17th 16:00",
-    tags: ["computer", "beginner-friendly", "college"],
+    date: "2022-7-30 6:00PM",
+    tags: ["programming", "beginner-friendly", "cool project"],
   },
   {
     id: 2,
@@ -42,8 +35,8 @@ const fakeData: postData[] =  [
     content: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi quo, commodi tempora quam eveniet nihil. Ad commodi, eum deleniti, reiciendis at dolorem et earum blanditiis incidunt nihil impedit iure ea!",
     comments: 10,
     likes: 59,
-    date: "2022 July 17th 16:00",
-    tags: ["computer", "beginner-friendly", "college"],
+    date: "2022-7-30 6:00PM",
+    tags: ["programming", "beginner-friendly", "cool project"],
   },
   {
     id: 3,
@@ -52,8 +45,8 @@ const fakeData: postData[] =  [
     content: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi quo, commodi tempora quam eveniet nihil. Ad commodi, eum deleniti, reiciendis at dolorem et earum blanditiis incidunt nihil impedit iure ea!",
     comments: 10,
     likes: 59,
-    date: "2022 July 17th 16:00",
-    tags: ["computer", "beginner-friendly", "college"],
+    date: "2022-7-30 6:00PM",
+    tags: ["programming", "beginner-friendly", "cool project"],
   },
   {
     id: 4,
@@ -62,8 +55,8 @@ const fakeData: postData[] =  [
     content: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi quo, commodi tempora quam eveniet nihil. Ad commodi, eum deleniti, reiciendis at dolorem et earum blanditiis incidunt nihil impedit iure ea!",
     comments: 10,
     likes: 59,
-    date: "2022 July 17th 16:00",
-    tags: ["computer", "beginner-friendly", "college"],
+    date: "2022-7-30 6:00PM",
+    tags: ["programming", "beginner-friendly", "cool project"],
   },
   {
     id: 5,
@@ -72,8 +65,8 @@ const fakeData: postData[] =  [
     content: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi quo, commodi tempora quam eveniet nihil. Ad commodi, eum deleniti, reiciendis at dolorem et earum blanditiis incidunt nihil impedit iure ea!",
     comments: 10,
     likes: 59,
-    date: "2022 July 17th 16:00",
-    tags: ["computer", "beginner-friendly", "college"],
+    date: "2022-7-30 6:00PM",
+    tags: ["programming", "beginner-friendly", "cool project"],
   },
   {
     id: 6,
@@ -82,8 +75,8 @@ const fakeData: postData[] =  [
     content: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi quo, commodi tempora quam eveniet nihil. Ad commodi, eum deleniti, reiciendis at dolorem et earum blanditiis incidunt nihil impedit iure ea!",
     comments: 10,
     likes: 59,
-    date: "2022 July 17th 16:00",
-    tags: ["computer", "beginner-friendly", "college"],
+    date: "2022-7-30 6:00PM",
+    tags: ["programming", "beginner-friendly", "cool project"],
   },
   {
     id: 7,
@@ -92,8 +85,8 @@ const fakeData: postData[] =  [
     content: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi quo, commodi tempora quam eveniet nihil. Ad commodi, eum deleniti, reiciendis at dolorem et earum blanditiis incidunt nihil impedit iure ea!",
     comments: 10,
     likes: 59,
-    date: "2022 July 17th 16:00",
-    tags: ["computer", "beginner-friendly", "college"],
+    date: "2022-7-30 6:00PM",
+    tags: ["programming", "beginner-friendly", "cool project"],
   },
   {
     id: 8,
@@ -102,8 +95,8 @@ const fakeData: postData[] =  [
     content: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi quo, commodi tempora quam eveniet nihil. Ad commodi, eum deleniti, reiciendis at dolorem et earum blanditiis incidunt nihil impedit iure ea!",
     comments: 10,
     likes: 59,
-    date: "2022 July 17th 16:00",
-    tags: ["computer", "beginner-friendly", "college"],
+    date: "2022-7-30 6:00PM",
+    tags: ["programming", "beginner-friendly", "cool project"],
   },
   {
     id: 9,
@@ -112,8 +105,8 @@ const fakeData: postData[] =  [
     content: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi quo, commodi tempora quam eveniet nihil. Ad commodi, eum deleniti, reiciendis at dolorem et earum blanditiis incidunt nihil impedit iure ea!",
     comments: 10,
     likes: 59,
-    date: "2022 July 17th 16:00",
-    tags: ["computer", "beginner-friendly", "college"],
+    date: "2022-7-30 6:00PM",
+    tags: ["programming", "beginner-friendly", "cool project"],
   },
   {
     id: 10,
@@ -122,8 +115,8 @@ const fakeData: postData[] =  [
     content: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi quo, commodi tempora quam eveniet nihil. Ad commodi, eum deleniti, reiciendis at dolorem et earum blanditiis incidunt nihil impedit iure ea!",
     comments: 10,
     likes: 59,
-    date: "2022 July 17th 16:00",
-    tags: ["computer", "beginner-friendly", "college"],
+    date: "2022-7-30 6:00PM",
+    tags: ["programming", "beginner-friendly", "cool project"],
   },
   {
     id: 11,
@@ -132,8 +125,8 @@ const fakeData: postData[] =  [
     content: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi quo, commodi tempora quam eveniet nihil. Ad commodi, eum deleniti, reiciendis at dolorem et earum blanditiis incidunt nihil impedit iure ea!",
     comments: 10,
     likes: 59,
-    date: "2022 July 17th 16:00",
-    tags: ["computer", "beginner-friendly", "college"],
+    date: "2022-7-30 6:00PM",
+    tags: ["programming", "beginner-friendly", "cool project"],
   },
   {
     id: 12,
@@ -142,61 +135,54 @@ const fakeData: postData[] =  [
     content: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi quo, commodi tempora quam eveniet nihil. Ad commodi, eum deleniti, reiciendis at dolorem et earum blanditiis incidunt nihil impedit iure ea!",
     comments: 10,
     likes: 59,
-    date: "2022 July 17th 16:00",
-    tags: ["computer", "beginner-friendly", "college"],
+    date: "2022-7-30 6:00PM",
+    tags: ["programming", "beginner-friendly", "cool project"],
   },
 ];
 
-const Home: NextPage = () => {
-  const [loggedIn, setLoggedIn] = useState(true);
-  const getUser = ()=>{
-    const app = initializeApp(config.firebaseConfig);
-    const auth = getAuth();
-    onAuthStateChanged(auth, (user) => {
-    if (user) {
-    // User is signed in, see docs for a list of available properties
-    // https://firebase.google.com/docs/reference/js/firebase.User
-    const uid = user.uid;
+const Comment: NextPage = () => {
+  const router = useRouter();
+  let id;
+  const [data, setData] = useState(fakeData[0]);
+  useEffect(()=>{
+      if(!router.isReady) return;
+      id = router.query;
+      setData(fakeData[parseInt(id.ID!.toString()) - 1]);
+  }, [router.isReady]);
 
-    console.log(user);
-    // ...
-    } else {
-    // User is signed out
-    // ...
-    }
-  });
-  }
-  useEffect(() => {
-    getUser();
-  }, [])
   return (
     <>
-      <Head>
-        <title> Homepage </title>
-        <meta name="description" content="Generated by create next app" />
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
-
       <Nav num={1}></Nav>
-      <section className={scss.home}>
-          {
-          loggedIn &&
-          (
-            <div>
-              <Image src={image} className={scss.round} width={200} height={200}></Image>
-              <h1>Hi, Zikun. Wanna ask a <span>question</span>?</h1>
-            </div>
-          )
-        }
-      
-        <Trending data={fakeData.slice(1, 12)}/>
-        <NewestPost data={fakeData.slice(1, 5)}/>
+      <section className={scss.comment}>
+        <section>
+          <Link href={"/post/ID"} as={`/post/${data.id}`}> 
+            <button>
+              Back
+            </button>
+          </Link>
+          <section>
+            <section>
+              <h2> Answer the question: </h2>
+              <h1> {data.title} </h1>
+              <p> {data.content} </p>
+            </section>
+            <section>
+              <h2> Your Answer: </h2>
+              <textarea name="" id="" cols={30} rows={10}></textarea>
+            </section>
+          </section>
+          <Link href={"/post/ID"} as={`/post/${data.id}`}> 
+            <button>
+              Submit
+            </button>
+          </Link>
+        </section>
       </section>
-      
-      <Footer></Footer>
 
+      <Footer></Footer>
     </>
   )
 }
 
-export default Home
+export default Comment
+          

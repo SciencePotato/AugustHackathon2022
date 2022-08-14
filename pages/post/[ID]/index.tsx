@@ -2,9 +2,10 @@ import { NextPage } from "next";
 import { useRouter } from "next/router";
 import Link from 'next/link';
 import Nav from '../../../component/navbar';
-import scss from '../../../styles/post.module.scss'
+import scss from '../../../styles/post.module.scss';
 import { useEffect, useState } from "react";
 import Answer from "../../../component/answer";
+import Footer from "../../../component/footer";
 
 interface postData {
   id: number,
@@ -178,9 +179,15 @@ const Post: NextPage = () => {
             <h1>
               {data.title}
             </h1>
-            <button>Answer this question</button>
-            
+
+            <button> 
+              <Link href={"/post/ID/comment"} as={`/post/${data.id}/comment`}>
+                comment
+              </Link>
+            </button>
+
             <Answer answer={fakeAnswer[0]} />
+            <Footer></Footer>
 
         </>
     );
