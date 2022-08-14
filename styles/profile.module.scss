@@ -3,7 +3,8 @@
     display:grid;
     place-items: center;
     position: relative;
-    margin-bottom: Max(20rem, 30vh);
+    margin-top: 5rem;
+    width: 80vw;
 }
 
 .profileName{
@@ -11,7 +12,6 @@
     font-size:40px;
     font-weight: bold;
     position:relative;
-
     right: -20px;
     top: -220px;
 }
@@ -22,7 +22,6 @@
     right: -270px;
     top: -200px;
     position:relative;
-
 }
 
 .round {
@@ -34,11 +33,9 @@
     margin-left: auto;
     margin-right: auto;
     width: 40%;
-    
 }
 
 .profileAns{
-
     font-size:40px;
     font-weight: bold;    
     position:relative;
@@ -46,8 +43,10 @@
     top:-160px;
     left:-230px;
 }
+
 .profileEnd{
     font-size:30px;
     text-align: center;
     color: grey;
+    margin-bottom: 5rem;
 }
