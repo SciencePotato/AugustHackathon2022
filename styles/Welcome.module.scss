@@ -7,12 +7,12 @@
   min-height: 90vh;
   width: 100vw;
   position: relative;
-  margin-bottom: 10vh;
+  margin-bottom: Max(20rem, 30vh);
   & > section {
-    width: 90%;
+    width: 80%;
     box-shadow: 0px 4px 30px 5px rgba($accent-color, 0.25);
     border-radius: 1rem;
-    height: 90%;
+    height: 80%;
     display: flex;
     overflow: hidden;
     flex-wrap: wrap;
@@ -20,11 +20,12 @@
       flex: 1;
       min-width: 40rem;
       min-height: 90vh;
+      overflow: hidden;
       &:first-of-type{
         display: grid;
         place-content: flex-start center;
         & > h1 {
-          font-size: 7rem;
+          font-size: 5rem;
           text-align: left;
           color: $accent-color-dark;
           width: 80%;
@@ -46,9 +47,9 @@
           height: 30vh;
           margin: auto;
           & > button {
-            padding: 5vh 0vh;
+            padding: 2.5vh 0vh;
             margin: 1vh;
-            margin-top: 10vh;
+            margin-top: 15vh;
             flex: 1;
             font-size: 3rem;
             justify-content: flex-end;
@@ -84,6 +85,25 @@
             color: $primary-color;
             text-align: center;
             font-size: 5rem;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1000px) {
+.Welcome {
+  & > section {
+    & > div {
+      min-width: 25rem;
+      &:first-of-type{
+        & > h1 {
+          font-size: 4rem;
+        }
+        & > div {
+          & > button {
+            font-size: 1.5rem;
           }
         }
       }

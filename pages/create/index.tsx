@@ -2,6 +2,7 @@ import type { NextPage } from 'next';
 import Head from 'next/head';
 import Footer from '../../component/footer';
 import Nav from '../../component/navbar';
+import scss from '../../styles/create.module.scss';
 
 const Create: NextPage = () => {
   return (
@@ -12,10 +13,42 @@ const Create: NextPage = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Nav num={1}></Nav>
+      <section className={scss.create}>
+        <section>
+          <h1>Write Your Question</h1>
+        </section>
+        <section>
+          <div>
+            <div>
+              <label htmlFor="">Title </label>
+              <textarea name="" id="" cols={30} rows={10}></textarea>
+            </div>
 
+            <div>
+              <label htmlFor="">Description </label>
+              <textarea name="" id="" cols={30} rows={10}></textarea>
+            </div>
+
+            <div>
+              <label htmlFor="">Tabs</label>
+              <textarea name="" id="" cols={30} rows={10}></textarea>
+            </div>
+          </div>
+          <div>
+            <p> Cool-Stuff</p>
+            <p> Computer-Science</p>
+            <p>Beginner-Friendly</p>
+            <p>Noob</p>
+          </div>
+          <div>
+            <button>
+              Submit
+            </button>
+          </div>
+        </section>
+      </section>
       <Footer></Footer>
     </>
   )
 }
-
 export default Create
