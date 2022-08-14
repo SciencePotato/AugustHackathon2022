@@ -59,7 +59,8 @@ const Profile: NextPage = () => {
       <section className={scss.profile}> 
       <div>
       <span>
-            <Image src="/zikunw.jpg" alt="User Profile" className={scss.round} width={240} height={240} ></Image>        </span>
+            <Image src="/zikunw.jpg" alt="User Profile" className={scss.round} width={240} height={240} ></Image> 
+      </span>
         <div className={scss.profileName}>Zikun Wang</div>
         <div className={scss.profileDes}> Hi I am a computer science student. 
         I like UI/UX design and stuff.<br></br> This is just filler text. Do not read too carefully.
