@@ -51,5 +51,4 @@ const Create: NextPage = () => {
     </>
   )
 }
-
 export default Create

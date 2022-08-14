@@ -7,24 +7,25 @@ interface Props {
 }
 
 const Nav: NextPage<Props> = (props) => {
-  const currentPage = props.num;
-  
   return (
     <section className={scss.header}>
       <div>
-        <h1> Info<span>Share</span></h1>
+        <h1><Link href={'/'}>Info</Link><span><Link href={'/'}>Share</Link></span></h1>
       </div>
 
       <div>
         <div>
           {
-            currentPage == 1 &&
+            props.num == 1 &&
             <>
               <h2 className={scss.active}> 
                 <Link href={"/home"}> Homepage </Link>
               </h2>
               <h2> 
                 <Link href={"/about"}> About </Link>
+              </h2>
+              <h2> 
+              <Link href={"/profile"}> Profile </Link>
               </h2>
             </>
           }
@@ -36,6 +37,23 @@ const Nav: NextPage<Props> = (props) => {
               </h2>
               <h2 className={scss.active}> 
                 <Link href={"/about"} > About </Link>
+              </h2>
+              <h2> 
+              <Link href={"/profile"}> Profile </Link>
+              </h2>
+            </>
+          }
+          {
+            props.num == 3 &&
+            <>
+            <h2> 
+                <Link href={"/home"}> Homepage </Link>
+              </h2>
+              <h2>
+                <Link href={"/about"}> About </Link>
+              </h2>
+              <h2 className={scss.active}> 
+                <Link href={"/profile"} > Profile </Link>
               </h2>
             </>
           }
@@ -54,7 +72,7 @@ const Nav: NextPage<Props> = (props) => {
             </Link>
           </h2>
           <h2>
-            <Link href={"/profile"}>
+            <Link href={"/setting"}>
               Setting
             </Link>
           </h2>
