@@ -1,1 +1,53 @@
 @import './globalVariable.scss';
+
+@import './globalVariable.scss';
+
+.comment {
+  display: grid;
+  place-items: flex-start;
+  margin-left: 5rem;
+  width: 50vw;
+  height: auto;
+  margin-bottom: 5rem;
+  padding-top: 5vh
+}
+
+.title {
+  margin: 20px 0;
+  font-size: 3.5rem;
+  font-weight: 800;
+  color: $accent-color-dark;
+}
+
+.backBtn {
+  padding: 1vh;
+  cursor: pointer;
+  font-size: 2rem;
+  border-radius: 1rem;
+  border: solid 1px $accent-color-dark;
+  color: $accent-color-dark;
+  background-color: $primary-color;
+  width: 7.5vw;
+}
+
+.commentBtn {
+  padding: 1vh;
+  cursor: pointer;
+  font-size: 2rem;
+  border-radius: 1rem;
+  border: solid 1px $accent-color-dark;
+  color: $primary-color;
+  background-color: $accent-color-dark;
+  width: 20vw;
+}
+
+.answers {
+  height:auto;
+
+  & > h1 {
+    margin: 20px 0;
+    font-size: 2.9rem;
+    font-weight: 800;
+    color: black;
+  }
+}

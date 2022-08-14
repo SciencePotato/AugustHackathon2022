@@ -154,12 +154,29 @@ const Comment: NextPage = () => {
     <>
       <Nav num={1}></Nav>
       <section className={scss.comment}>
-        {data.id}
-        <button>
+        <section>
           <Link href={"/post/ID"} as={`/post/${data.id}`}> 
-            Submit
+            <button>
+              Back
+            </button>
           </Link>
-        </button>
+          <section>
+            <section>
+              <h2> Answer the question: </h2>
+              <h1> {data.title} </h1>
+              <p> {data.content} </p>
+            </section>
+            <section>
+              <h2> Your Answer: </h2>
+              <textarea name="" id="" cols={30} rows={10}></textarea>
+            </section>
+          </section>
+          <Link href={"/post/ID"} as={`/post/${data.id}`}> 
+            <button>
+              Submit
+            </button>
+          </Link>
+        </section>
       </section>
 
       <Footer></Footer>
