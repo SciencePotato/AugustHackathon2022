@@ -1,0 +1,77 @@
+@import './globalVariable.scss';
+
+.answer{
+  box-sizing: border-box;
+  cursor: pointer;
+
+  position: relative;
+  width: max(70vw, 300px);
+  min-height: 250px;
+
+  margin: 20px auto auto 40px;
+
+  background: #FFFFFF;
+  /* subtle-border */
+  border: 1px solid #C2C5D5;
+  border-radius: 25px;
+
+  display: grid;
+  grid-template-columns: 200px 1fr;
+}
+
+.userCard {
+  background-color: rgb(238, 238, 238);
+  border-radius: 25px 0px 0px 25px;
+
+  justify-items: stretch;
+  padding: 20px;
+
+  display: grid;
+}
+
+.userImage {
+  border-radius: 10rem;
+}
+
+.img {
+  height: 90px;
+  width: 90px;
+  justify-self: center;
+}
+
+.username {
+  font: 1.3rem bold;
+  position: relative;
+  margin: 0;
+  justify-self: center;
+}
+
+.likeContainer {
+  justify-self: center;
+
+  
+  height: 60px;
+  width: 100px;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+
+  & > svg {
+
+    align-self: center;
+  }
+
+  & > p {
+    align-self: center;
+    font: 2rem bold;
+    margin: 0;
+  }
+}
+
+.content {
+  padding: 10px 30px;
+}
+
+.date {
+  color: grey;
+}

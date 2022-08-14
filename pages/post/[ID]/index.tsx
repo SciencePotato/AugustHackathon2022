@@ -4,6 +4,7 @@ import Link from 'next/link';
 import Nav from '../../../component/navbar';
 import scss from '../../../styles/post.module.scss'
 import { useEffect, useState } from "react";
+import Answer from "../../../component/answer";
 
 interface postData {
   id: number,
@@ -143,6 +144,23 @@ const fakeData: postData[] =  [
   },
 ];
 
+type userAnswer = {
+  username: string,
+  likes: number,
+  date: string,
+  content: string
+}
+
+const fakeAnswer = [
+  {
+    username: "CoolGuy123",
+    likes: 12,
+    date: "2022-7-30 6:00PM",
+    content: `Hi, there answer and answer.
+    I can provide useful weblink: www.youtube.com`,
+  }
+]
+
 const Post: NextPage = () => {
     
     const router = useRouter();
@@ -160,6 +178,10 @@ const Post: NextPage = () => {
             <h1>
               {data.title}
             </h1>
+            <button>Answer this question</button>
+            
+            <Answer answer={fakeAnswer[0]} />
+
         </>
     );
 }
