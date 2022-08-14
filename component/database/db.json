@@ -1,0 +1,102 @@
+[
+    {
+        "user_ID": "1",
+        "posts" : [
+            {
+                "post_id": "1",
+                "header": "Where do I learn how to code",
+                "content":"I want to write code and start programming, but I don't have any idea on how to start programming",
+                "upvote":"6",
+                "tags":"noob",
+
+                "comments":[
+                    {
+                        "user_ID":"2",
+                        "cotent":"Go on youtube to find these programming videos. Code academy is a good one"
+                    }
+                ]
+            },
+            {
+                "post_id": "3",
+                "header": "Where do I learn how to code",
+                "content":"I want to write code and start programming, but I don't have any idea on how to start programming",
+                "upvote":"6",
+                "tags":"noob",
+
+                "comments":[
+                    {
+                        "user_ID":"2",
+                        "cotent":"Go on youtube to find these programming videos. Code academy is a good one"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user_ID": "2",
+        "posts" : [
+            {
+                "post_id": "2",
+                "header": "Can I find any resources on SQL?",
+                "content":"I want to write SQL but is hard to find what to use",
+                "upvote":"23",
+                "tags":"noob",
+                "comments":[
+                    {
+                        "user_ID":"3",
+                        "cotent":"Go on youtube to find these programming videos. Code academy is a good one"
+                    },
+                    {
+                        "user_ID":"4",
+                        "cotent":"Go on youtube to find these programming videos. Code academy is a good one"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user_ID": "3",
+        "posts" : [
+            {
+                "post_id": "4",
+                "header": "Can I find any resources on SQL?",
+                "content":"I want to write SQL but is hard to find what to use",
+                "upvote":"23",
+                "tags":"noob",
+                "comments":[
+                    {
+                        "user_ID":"3",
+                        "cotent":"Go on youtube to find these programming videos. Code academy is a good one"
+                    },
+                    {
+                        "user_ID":"4",
+                        "cotent":"Go on youtube to find these programming videos. Code academy is a good one"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "user_ID": "4",
+        "posts" : [
+            {
+                "post_id": "5",
+                "header": "Can I find any resources on SQL?",
+                "content":"I want to write SQL but is hard to find what to use",
+                "upvote":"23",
+                "tags":"noob",
+                "comments":[
+                    {
+                        "user_ID":"3",
+                        "cotent":"Go on youtube to find these programming videos. Code academy is a good one"
+                    },
+                    {
+                        "user_ID":"4",
+                        "cotent":"Go on youtube to find these programming videos. Code academy is a good one"
+                    }
+                ]
+            }
+        ]
+    }
+    
+]
