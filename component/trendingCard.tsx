@@ -1,6 +1,14 @@
 import type { NextPage } from 'next';
 import Link from 'next/link';
 import scss from '../styles/trendingCard.module.scss';
+import Image from 'next/image';
+
+import image1 from  '../public/stock-photos/stock-photo-00001.jpg';
+import image2 from  '../public/stock-photos/stock-photo-00002.jpg';
+import image3 from  '../public/stock-photos/stock-photo-00003.jpg';
+import image4 from  '../public/stock-photos/stock-photo-00004.jpg';
+import image5 from  '../public/stock-photos/stock-photo-00005.jpg';
+import image6 from  '../public/stock-photos/stock-photo-00006.jpg';
 
 interface postData {
   id: number,
@@ -17,11 +25,15 @@ interface Props {
   post: postData;
 }
 
+const imgs = [image1, image2, image3, image4, image5, image6];
+
 const TrendingCard: NextPage<Props> = ({ post }) => {
   return (
     <Link href={"/post/ID"} as={`/post/${post.id}`}>
       <div className={scss.trendingCard}>
-        <div className={scss.img}></div>
+        <div className={scss.img}>
+         <Image src={imgs[post.id % 6]} className={scss.round} width={298} height={200}></Image>
+        </div>
         <div className={scss.info}>
           <div className={scss.text}>
             <h2 className={scss.title}>{post.title}</h2>
