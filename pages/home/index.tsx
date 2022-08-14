@@ -190,6 +190,7 @@ const Home: NextPage = () => {
         }
       
         <Trending data={fakeData.slice(1, 12)}/>
+        <NewestPost data={fakeData.slice(1, 5)}/>
       </section>
       
       <Footer></Footer>
