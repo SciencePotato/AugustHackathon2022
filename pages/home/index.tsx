@@ -166,7 +166,7 @@ const Home: NextPage = () => {
           )
         }
       
-        <Trending data={fakeData.slice(1, 5)}/>
+        <Trending data={fakeData.slice(1, 12)}/>
       </section>
       
       <Footer></Footer>
