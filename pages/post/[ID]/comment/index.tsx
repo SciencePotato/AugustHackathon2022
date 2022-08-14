@@ -1,10 +1,10 @@
-import { NextPage } from "next";
-import { useRouter } from "next/router";
+import type { NextPage } from 'next';
+import { useRouter } from 'next/router';
+import { useEffect, useState } from 'react';
+import scss from '../../../../styles/comment.module.scss';
+import Footer from '../../../../component/footer';
+import Nav from '../../../../component/navbar';
 import Link from 'next/link';
-import Nav from '../../../component/navbar';
-import scss from '../../../styles/post.module.scss';
-import { useEffect, useState } from "react";
-import Footer from "../../../component/footer";
 
 interface postData {
   id: number,
@@ -15,10 +15,6 @@ interface postData {
   likes: number,
   date: string,
   tags: string[],
-}
-
-interface Props {
-  post: postData;
 }
 
 const fakeData: postData[] =  [
@@ -144,31 +140,32 @@ const fakeData: postData[] =  [
   },
 ];
 
-const Post: NextPage = () => {
-    
-    const router = useRouter();
-    let id;
-    const [data, setData] = useState(fakeData[0]);
-    useEffect(()=>{
-        if(!router.isReady) return;
-        id = router.query;
-        setData(fakeData[parseInt(id.ID!.toString()) - 1]);
-    }, [router.isReady]);
+const Comment: NextPage = () => {
+  const router = useRouter();
+  let id;
+  const [data, setData] = useState(fakeData[0]);
+  useEffect(()=>{
+      if(!router.isReady) return;
+      id = router.query;
+      setData(fakeData[parseInt(id.ID!.toString()) - 1]);
+  }, [router.isReady]);
 
-    return (
-        <> 
-            <Nav num={1}></Nav>
-            <h1>
-              {data.title}
-            </h1>
-            <button> 
-              <Link href={"/post/ID/comment"} as={`/post/${data.id}/comment`}>
-                comment
-              </Link>
-            </button>
-            <Footer></Footer>
-        </>
-    );
+  return (
+    <>
+      <Nav num={1}></Nav>
+      <section className={scss.comment}>
+        {data.id}
+        <button>
+          <Link href={"/post/ID"} as={`/post/${data.id}`}> 
+            Submit
+          </Link>
+        </button>
+      </section>
+
+      <Footer></Footer>
+    </>
+  )
 }
 
-export default Post;
+export default Comment
+          
