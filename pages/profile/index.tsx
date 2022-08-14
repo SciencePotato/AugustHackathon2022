@@ -6,44 +6,6 @@ import scss from '../../styles/profile.module.scss';
 import Image from 'next/image';
 import Answer from '../../component/answer';
 
-const fakeData:{id:number; title:string;content:string;comments:number;likes:number}[] =  [
-  {
-    id: 1,
-    title: "This is the first article",
-    content: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi quo, commodi tempora quam eveniet nihil. Ad commodi, eum deleniti, reiciendis at dolorem et earum blanditiis incidunt nihil impedit iure ea!",
-    comments: 10,
-    likes: 59,
-  },
-  {
-    id: 2,
-    title: "This is the second article",
-    content: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi quo, commodi tempora quam eveniet nihil. Ad commodi, eum deleniti, reiciendis at dolorem et earum blanditiis incidunt nihil impedit iure ea!",
-    comments: 10,
-    likes: 59,
-  },
-  {
-    id: 3,
-    title: "This is the third article",
-    content: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi quo, commodi tempora quam eveniet nihil. Ad commodi, eum deleniti, reiciendis at dolorem et earum blanditiis incidunt nihil impedit iure ea!",
-    comments: 10,
-    likes: 59,
-  },
-  {
-    id: 4,
-    title: "This is the fourth article",
-    content: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi quo, commodi tempora quam eveniet nihil. Ad commodi, eum deleniti, reiciendis at dolorem et earum blanditiis incidunt nihil impedit iure ea!",
-    comments: 10,
-    likes: 59,
-  },
-  {
-    id: 5,
-    title: "This is the fifth article",
-    content: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi quo, commodi tempora quam eveniet nihil. Ad commodi, eum deleniti, reiciendis at dolorem et earum blanditiis incidunt nihil impedit iure ea!",
-    comments: 10,
-    likes: 59,
-  },
-];
-
 const fakeAnswer = [
   {
     username: "CoolGuy123",
@@ -120,8 +82,8 @@ const Profile: NextPage = () => {
       </div>
        <div className={scss.profileAns}>His answers:</div>
        <div className={scss.ans}>
-        {fakeAnswer.map(answer => 
-            <Answer answer={answer} />
+        {fakeAnswer.map((answer, i) => 
+            <Answer answer={answer} key={i} />
           )}
        </div>
       </section>

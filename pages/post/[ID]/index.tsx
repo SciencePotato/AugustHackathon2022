@@ -228,8 +228,8 @@ const Post: NextPage = () => {
               </Link>
             </button>
 
-            {fakeAnswer.map(answer => 
-                <Answer answer={data} />
+            {fakeAnswer.map((answer, i) => 
+                <Answer answer={answer} key={i} />
               )}
             <Footer></Footer>
         </>
