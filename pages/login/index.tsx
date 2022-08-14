@@ -58,11 +58,11 @@ const Login: NextPage = () => {
           <div>
             <div>
               <div>
-                {/*<Link href={"/home"}>*/}
+                <Link href={"/home"}>
                   <button id='btnSignIn' onClick={ signin}>
                     Login
                   </button>
-                {/*</Link>*/}
+                </Link>
                 <p>
                   <Link href={"/signup"}> Don&apos;t have an account? Join us now!</Link>
                 </p>
