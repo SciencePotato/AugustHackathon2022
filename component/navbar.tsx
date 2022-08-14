@@ -7,8 +7,6 @@ interface Props {
 }
 
 const Nav: NextPage<Props> = (props) => {
-  const currentPage = props.num;
-  
   return (
     <section className={scss.header}>
       <div>
@@ -18,7 +16,7 @@ const Nav: NextPage<Props> = (props) => {
       <div>
         <div>
           {
-            currentPage == 1 &&
+            props.num == 1 &&
             <>
               <h2 className={scss.active}> 
                 <Link href={"/home"}> Homepage </Link>
