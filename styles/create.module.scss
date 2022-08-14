@@ -48,6 +48,7 @@
                             width: 100%;
                             margin-bottom: 1vh;
                             resize: none;
+                            border-radius: 0.5rem;
                         }
                         &:first-of-type, &:last-of-type{
                             & > textarea {
@@ -59,10 +60,6 @@
                             & > textarea {
                                 height: 20vh;
                             }
-                        }
-
-                        &:last-of-type{
-
                         }
                     }
                 }
@@ -83,7 +80,7 @@
                         }
                     }
                 }
-                
+
                 &:last-of-type {
                     flex: 1;
                     & > button {
@@ -106,4 +103,4 @@
             }
         }
     }
-}
+} 

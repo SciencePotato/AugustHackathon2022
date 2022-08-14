@@ -12,7 +12,7 @@ const Nav: NextPage<Props> = (props) => {
   return (
     <section className={scss.header}>
       <div>
-        <h1> Info<span>Share</span></h1>
+        <h1><Link href={'/'}>Info</Link><span><Link href={'/'}>Share</Link></span></h1>
       </div>
 
       <div>

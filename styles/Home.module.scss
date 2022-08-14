@@ -1,6 +1,7 @@
 @import './globalVariable.scss';
 
 .home {
+
     & > div {
         &:first-of-type {
             display: grid;
@@ -29,4 +30,4 @@
             }
         }
     }
-}
+} 
