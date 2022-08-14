@@ -159,7 +159,49 @@ const fakeAnswer = [
     date: "2022-7-30 6:00PM",
     content: `Hi, there answer and answer.
     I can provide useful weblink: www.youtube.com`,
-  }
+  },
+  {
+    username: "CoolGuy123",
+    likes: 12,
+    date: "2022-7-30 6:00PM",
+    content: `Hi, there answer and answer.
+    I can provide useful weblink: www.youtube.com`,
+  },
+  {
+    username: "CoolGuy123",
+    likes: 12,
+    date: "2022-7-30 6:00PM",
+    content: `Hi, there answer and answer.
+    I can provide useful weblink: www.youtube.com`,
+  },
+  {
+    username: "CoolGuy123",
+    likes: 12,
+    date: "2022-7-30 6:00PM",
+    content: `Hi, there answer and answer.
+    I can provide useful weblink: www.youtube.com`,
+  },
+  {
+    username: "CoolGuy123",
+    likes: 12,
+    date: "2022-7-30 6:00PM",
+    content: `Hi, there answer and answer.
+    I can provide useful weblink: www.youtube.com`,
+  },
+  {
+    username: "CoolGuy123",
+    likes: 12,
+    date: "2022-7-30 6:00PM",
+    content: `Hi, there answer and answer.
+    I can provide useful weblink: www.youtube.com`,
+  },
+  {
+    username: "CoolGuy123",
+    likes: 12,
+    date: "2022-7-30 6:00PM",
+    content: `Hi, there answer and answer.
+    I can provide useful weblink: www.youtube.com`,
+  },
 ]
 
 const Post: NextPage = () => {
@@ -186,9 +228,10 @@ const Post: NextPage = () => {
               </Link>
             </button>
 
-            <Answer answer={fakeAnswer[0]} />
+            {fakeAnswer.map(answer => 
+                <Answer answer={data} />
+              )}
             <Footer></Footer>
-
         </>
     );
 }
