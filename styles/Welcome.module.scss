@@ -3,8 +3,6 @@
 .Welcome {
   display: grid;
   place-items: center;
-  height: 90vh;
-  min-height: 90vh;
   width: 100vw;
   position: relative;
   margin-bottom: Max(20rem, 30vh);
@@ -14,7 +12,6 @@
     border-radius: 1rem;
     height: 80%;
     display: flex;
-    overflow: hidden;
     flex-wrap: wrap;
     & > div {
       flex: 1;
@@ -85,25 +82,6 @@
             color: $primary-color;
             text-align: center;
             font-size: 5rem;
-          }
-        }
-      }
-    }
-  }
-}
-
-@media screen and (max-width: 1000px) {
-.Welcome {
-  & > section {
-    & > div {
-      min-width: 25rem;
-      &:first-of-type{
-        & > h1 {
-          font-size: 4rem;
-        }
-        & > div {
-          & > button {
-            font-size: 1.5rem;
           }
         }
       }
