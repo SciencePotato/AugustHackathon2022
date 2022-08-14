@@ -3,12 +3,15 @@ import Link from 'next/link';
 import scss from '../styles/trending.module.scss'
 import TrendingCard from './trendingCard';
 
-export interface postData {
+interface postData {
   id: number,
   title: string,
+  username: string,
   content: string,
   comments: number,
   likes: number,
+  date: string,
+  tags: string[],
 }
 
 interface Props {
