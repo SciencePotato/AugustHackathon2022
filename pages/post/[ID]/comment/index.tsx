@@ -1,11 +1,10 @@
-import { NextPage } from "next";
-import { useRouter } from "next/router";
+import type { NextPage } from 'next';
+import { useRouter } from 'next/router';
+import { useEffect, useState } from 'react';
+import scss from '../../../../styles/comment.module.scss';
+import Footer from '../../../../component/footer';
+import Nav from '../../../../component/navbar';
 import Link from 'next/link';
-import Nav from '../../../component/navbar';
-import scss from '../../../styles/post.module.scss';
-import { useEffect, useState } from "react";
-import Answer from "../../../component/answer";
-import Footer from "../../../component/footer";
 
 interface postData {
   id: number,
@@ -16,10 +15,6 @@ interface postData {
   likes: number,
   date: string,
   tags: string[],
-}
-
-interface Props {
-  post: postData;
 }
 
 const fakeData: postData[] =  [
@@ -145,110 +140,49 @@ const fakeData: postData[] =  [
   },
 ];
 
-type userAnswer = {
-  username: string,
-  likes: number,
-  date: string,
-  content: string
-}
+const Comment: NextPage = () => {
+  const router = useRouter();
+  let id;
+  const [data, setData] = useState(fakeData[0]);
+  useEffect(()=>{
+      if(!router.isReady) return;
+      id = router.query;
+      setData(fakeData[parseInt(id.ID!.toString()) - 1]);
+  }, [router.isReady]);
 
-const fakeAnswer = [
-  {
-    username: "CoolGuy123",
-    likes: 12,
-    date: "2022-7-30 6:00PM",
-    content: `Hi, there answer and answer.
-    I can provide useful weblink: www.youtube.com`,
-  },
-  {
-    username: "CoolGuy123",
-    likes: 12,
-    date: "2022-7-30 6:00PM",
-    content: `Hi, there answer and answer.
-    I can provide useful weblink: www.youtube.com`,
-  },
-  {
-    username: "CoolGuy123",
-    likes: 12,
-    date: "2022-7-30 6:00PM",
-    content: `Hi, there answer and answer.
-    I can provide useful weblink: www.youtube.com`,
-  },
-  {
-    username: "CoolGuy123",
-    likes: 12,
-    date: "2022-7-30 6:00PM",
-    content: `Hi, there answer and answer.
-    I can provide useful weblink: www.youtube.com`,
-  },
-  {
-    username: "CoolGuy123",
-    likes: 12,
-    date: "2022-7-30 6:00PM",
-    content: `Hi, there answer and answer.
-    I can provide useful weblink: www.youtube.com`,
-  },
-  {
-    username: "CoolGuy123",
-    likes: 12,
-    date: "2022-7-30 6:00PM",
-    content: `Hi, there answer and answer.
-    I can provide useful weblink: www.youtube.com`,
-  },
-  {
-    username: "CoolGuy123",
-    likes: 12,
-    date: "2022-7-30 6:00PM",
-    content: `Hi, there answer and answer.
-    I can provide useful weblink: www.youtube.com`,
-  },
-]
-
-const Post: NextPage = () => {
-    
-    const router = useRouter();
-    let id;
-    const [data, setData] = useState(fakeData[0]);
-    useEffect(()=>{
-        if(!router.isReady) return;
-        id = router.query;
-        setData(fakeData[parseInt(id.ID!.toString()) - 1]);
-    }, [router.isReady]);
-
-    return (
-        <> 
-            <Nav num={1}></Nav>
-            <section className={scss.comment}>
-              <section>
-                <Link href={"/post/ID"} as={`/post/${data.id}`}> 
-                  <button className={scss.backBtn}>
-                    Back
-                  </button>
-                </Link>
-                <section>
-                  <section>
-                    <h1 className={scss.title}> {data.title} </h1>
-                    <p className={scss.content}> {data.content} </p>
-                  </section>
-                  <button className={scss.commentBtn}> 
-                    <Link href={"/post/ID/comment"} as={`/post/${data.id}/comment`}>
-                      Answer this question
-                    </Link>
-                  </button>
-                </section>
-              </section>
-
-              <div className={scss.answers}>
-                <h1>Other answers:</h1>
-                {fakeAnswer.map((answer, i) => 
-                  <Answer answer={answer} key={i} />
-                )}
-              </div>
+  return (
+    <>
+      <Nav num={1}></Nav>
+      <section className={scss.comment}>
+        <section>
+          <Link href={"/post/ID"} as={`/post/${data.id}`}> 
+            <button>
+              Back
+            </button>
+          </Link>
+          <section>
+            <section>
+              <h2> Answer the question: </h2>
+              <h1> {data.title} </h1>
+              <p> {data.content} </p>
             </section>
+            <section>
+              <h2> Your Answer: </h2>
+              <textarea name="" id="" cols={30} rows={10}></textarea>
+            </section>
+          </section>
+          <Link href={"/post/ID"} as={`/post/${data.id}`}> 
+            <button>
+              Submit
+            </button>
+          </Link>
+        </section>
+      </section>
 
-            <Footer></Footer>
-        </>
-    );
+      <Footer></Footer>
+    </>
+  )
 }
 
-export default Post;
+export default Comment
+          

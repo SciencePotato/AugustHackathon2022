@@ -1,1 +1,60 @@
 @import './globalVariable.scss';
+
+.comment {
+    display: grid;
+    place-items: center flex-start;
+    margin-left: 5rem;
+    width: 100vw;
+    height: 90vh;
+    margin-bottom: 5rem;
+    & > section {
+        & > section {
+            width: 50vw;
+            & > section {
+                margin: 2rem 0rem;
+                &:first-of-type {
+                    & > h1 {
+                        margin: 0px;
+                        font-size: 3.5rem;
+                        font-weight: 800;
+                        color: $accent-color-dark;
+                    }
+                    & > h2 {
+                        margin: 0px;
+                        font-size: 2rem;
+                    }
+                    & > p {
+                        margin-bottom: 5vh;
+                    }
+                }
+                &:last-of-type {
+                    & > textarea {
+                        resize: none;
+                        width: 50vw;
+                        height: 30vh;
+                        padding: 1vh;
+                        border-radius: 0.5rem;
+                    }
+                }
+            }
+        }
+
+        & > button {
+            padding: 1vh;
+            cursor: pointer;
+            font-size: 2rem;
+            border-radius: 1rem;
+            border: solid 1px $accent-color-dark;
+            &:first-of-type {
+                color: $accent-color-dark;
+                background-color: $primary-color;
+                width: 7.5vw;
+            }
+            &:last-of-type{
+                color: $primary-color;
+                background-color: $accent-color-dark;
+                width: 20vw;
+            }
+        }
+    }
+}

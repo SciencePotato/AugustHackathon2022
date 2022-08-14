@@ -3,48 +3,62 @@ import Head from 'next/head';
 import Nav from '../../component/navbar';
 import Footer from '../../component/footer';
 import scss from '../../styles/profile.module.scss';
-import Trending from '../../component/trending';
 import Image from 'next/image';
-const fakeData:{id:number; title:string;content:string;comments:number;likes:number}[] =  [
-  {
-    id: 1,
-    title: "This is the first article",
-    content: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi quo, commodi tempora quam eveniet nihil. Ad commodi, eum deleniti, reiciendis at dolorem et earum blanditiis incidunt nihil impedit iure ea!",
-    comments: 10,
-    likes: 59,
-  },
-  {
-    id: 2,
-    title: "This is the second article",
-    content: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi quo, commodi tempora quam eveniet nihil. Ad commodi, eum deleniti, reiciendis at dolorem et earum blanditiis incidunt nihil impedit iure ea!",
-    comments: 10,
-    likes: 59,
-  },
-  {
-    id: 3,
-    title: "This is the third article",
-    content: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi quo, commodi tempora quam eveniet nihil. Ad commodi, eum deleniti, reiciendis at dolorem et earum blanditiis incidunt nihil impedit iure ea!",
-    comments: 10,
-    likes: 59,
-  },
-  {
-    id: 4,
-    title: "This is the fourth article",
-    content: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi quo, commodi tempora quam eveniet nihil. Ad commodi, eum deleniti, reiciendis at dolorem et earum blanditiis incidunt nihil impedit iure ea!",
-    comments: 10,
-    likes: 59,
-  },
-  {
-    id: 5,
-    title: "This is the fifth article",
-    content: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi quo, commodi tempora quam eveniet nihil. Ad commodi, eum deleniti, reiciendis at dolorem et earum blanditiis incidunt nihil impedit iure ea!",
-    comments: 10,
-    likes: 59,
-  },
-];
-const Profile: NextPage = () => {
+import Answer from '../../component/answer';
 
-  
+const fakeAnswer = [
+  {
+    username: "CoolGuy123",
+    likes: 12,
+    date: "2022-7-30 6:00PM",
+    content: `Hi, there answer and answer.
+    I can provide useful weblink: www.youtube.com`,
+  },
+  {
+    username: "CoolGuy123",
+    likes: 12,
+    date: "2022-7-30 6:00PM",
+    content: `Hi, there answer and answer.
+    I can provide useful weblink: www.youtube.com`,
+  },
+  {
+    username: "CoolGuy123",
+    likes: 12,
+    date: "2022-7-30 6:00PM",
+    content: `Hi, there answer and answer.
+    I can provide useful weblink: www.youtube.com`,
+  },
+  {
+    username: "CoolGuy123",
+    likes: 12,
+    date: "2022-7-30 6:00PM",
+    content: `Hi, there answer and answer.
+    I can provide useful weblink: www.youtube.com`,
+  },
+  {
+    username: "CoolGuy123",
+    likes: 12,
+    date: "2022-7-30 6:00PM",
+    content: `Hi, there answer and answer.
+    I can provide useful weblink: www.youtube.com`,
+  },
+  {
+    username: "CoolGuy123",
+    likes: 12,
+    date: "2022-7-30 6:00PM",
+    content: `Hi, there answer and answer.
+    I can provide useful weblink: www.youtube.com`,
+  },
+  {
+    username: "CoolGuy123",
+    likes: 12,
+    date: "2022-7-30 6:00PM",
+    content: `Hi, there answer and answer.
+    I can provide useful weblink: www.youtube.com`,
+  },
+]
+
+const Profile: NextPage = () => {
   
   return ( <>
     <div>
@@ -67,6 +81,11 @@ const Profile: NextPage = () => {
 
       </div>
        <div className={scss.profileAns}>His answers:</div>
+       <div className={scss.ans}>
+        {fakeAnswer.map((answer, i) => 
+            <Answer answer={answer} key={i} />
+          )}
+       </div>
       </section>
       <section> 
         <div className={scss.profileEnd}> 
@@ -76,6 +95,8 @@ const Profile: NextPage = () => {
         </div>
       </section>
       </div>
+
+      
       <Footer></Footer>
     </div>
     </> );

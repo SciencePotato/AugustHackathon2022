@@ -24,7 +24,7 @@ const Trending: NextPage<Props> = (props) => {
       <h1 className='trending-title'>Trending Now</h1>
       <div className='trending-card-container'>
         {props.data.map(post =>
-            <TrendingCard post={post} />
+            <TrendingCard post={post} key={post.id}/>
           )}
       </div>
     </div>
