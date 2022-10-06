@@ -6,7 +6,7 @@ Our design shown in [Figma](https://www.figma.com/file/4d9zhQbI47duD4FHCY2iJN/Au
 
 Demo video shown in [Youtube](https://youtu.be/PQf0_v_qKDc)
 
-This is our website [InfoShare](https://augusthackathon2022-9py1ox1yc-sciencepotato.vercel.app/)
+This is our website [InfoShare](https://augusthackathon2022-2idv2pg07-sciencepotato.vercel.app/)
 ## Problem
 There are free education offered in the United States from k - 12, but not everyone can afford college due to various reasons. Some students might be forced to attend community college where the education and resources is not as good as regular Universities; some students might be restrained by the social class he is in therefore he performed his potential to the maximum.  
 
